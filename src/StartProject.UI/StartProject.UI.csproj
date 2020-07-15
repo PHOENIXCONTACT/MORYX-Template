@@ -60,8 +60,8 @@
     <Reference Include="CommandLine, Version=2.7.82.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\..\packages\CommandLineParser.2.7.82\lib\net461\CommandLine.dll</HintPath>
     </Reference>
-    <Reference Include="Controls4Industry, Version=3.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Controls4Industry.3.0.0-dev.15\lib\net461\Controls4Industry.dll</HintPath>
+    <Reference Include="Controls4Industry, Version=3.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Controls4Industry.3.0.0-dev.20\lib\net461\Controls4Industry.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
@@ -69,14 +69,17 @@
     <Reference Include="Moryx, Version=3.0.0.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.3.0.0-dev.26\lib\netstandard2.0\Moryx.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.ClientFramework, Version=3.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.ClientFramework.3.0.0-dev.15\lib\net461\Moryx.ClientFramework.dll</HintPath>
+    <Reference Include="Moryx.ClientFramework, Version=3.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.ClientFramework.3.0.0-dev.20\lib\net461\Moryx.ClientFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.ClientFramework.Kernel, Version=3.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.ClientFramework.Kernel.3.0.0-dev.15\lib\net461\Moryx.ClientFramework.Kernel.dll</HintPath>
+    <Reference Include="Moryx.ClientFramework.Configurator, Version=3.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.ClientFramework.Configurator.3.0.0-dev.20\lib\net461\Moryx.ClientFramework.Configurator.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.ClientFramework.SimpleShell, Version=3.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.ClientFramework.SimpleShell.3.0.0-dev.15\lib\net461\Moryx.ClientFramework.SimpleShell.dll</HintPath>
+    <Reference Include="Moryx.ClientFramework.Kernel, Version=3.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.ClientFramework.Kernel.3.0.0-dev.20\lib\net461\Moryx.ClientFramework.Kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.ClientFramework.SimpleShell, Version=3.0.0.20, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.ClientFramework.SimpleShell.3.0.0-dev.20\lib\net461\Moryx.ClientFramework.SimpleShell.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.Container, Version=3.0.0.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Container.3.0.0-dev.26\lib\netstandard2.0\Moryx.Container.dll</HintPath>
