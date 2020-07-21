@@ -75,6 +75,9 @@
     <Reference Include="Moryx, Version=3.0.0.80, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.3.0.0-dev.80\lib\netstandard2.0\Moryx.dll</HintPath>
     </Reference>
+    <Reference Include="Moryx.AbstractionLayer, Version=5.0.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.AbstractionLayer.5.0.0-dev.21\lib\net461\Moryx.AbstractionLayer.dll</HintPath>
+    </Reference>
     <Reference Include="Moryx.Container, Version=3.0.0.80, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Container.3.0.0-dev.80\lib\netstandard2.0\Moryx.Container.dll</HintPath>
     </Reference>
@@ -83,6 +86,15 @@
     </Reference>
     <Reference Include="Moryx.Model.PostgreSQL, Version=3.0.0.80, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Model.PostgreSQL.3.0.0-dev.80\lib\net461\Moryx.Model.PostgreSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.Notifications, Version=5.0.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Notifications.5.0.0-dev.21\lib\net461\Moryx.Notifications.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.Resources.Interaction, Version=5.0.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Resources.Interaction.5.0.0-dev.21\lib\net461\Moryx.Resources.Interaction.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.Resources.Management, Version=5.0.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Resources.Management.5.0.0-dev.21\lib\net461\Moryx.Resources.Management.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.Runtime, Version=3.0.0.80, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Runtime.3.0.0-dev.80\lib\netstandard2.0\Moryx.Runtime.dll</HintPath>
@@ -162,12 +174,19 @@
     <None Include="Config\log4net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="Config\Moryx.Resources.Management.ModuleConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Config\Moryx.Tools.Wcf.WcfConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyApplication.Resources.MyResource\MyApplication.Resources.MyResource.csproj">
+      <Project>{dce3b1a1-75b0-42eb-afea-531f23825ee5}</Project>
+      <Name>MyApplication.Resources.MyResource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyApplication\MyApplication.csproj">
       <Project>{df4730d4-5db2-46a5-9f2b-c7b22e61268b}</Project>
       <Name>MyApplication</Name>
