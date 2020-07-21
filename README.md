@@ -19,6 +19,12 @@ You can extend your solution by adding more packages to your *StartProject* or c
 
 The projects, that you create yourself, need to be loaded in MORYX. Add a reference to your project in the *StartProject*. This will make sure, that your project is build every time you start debugging. It also ensures, that all your projects dependencies are present in the *StartProjects* execution directory and that the binary is removed on clean-up.
 
+### Module Quick Start
+
+The modules entry class *ModuleController* is prepared for usage with or without a facade. Just (un)comment the necessary code blocks. 
+
+You can interact with the module through console or *MaintenanceWeb*. To invoke the `SayHello`-method you can type "exec MyModule hello Name" or "enter MyModule" followed by "hello Name". To remove the scoped mode type "bye".
+
 ## Branches
 
 The *master* branch of this template is the bare minimum most developers will need to start, whether the build an application, a reusable module or a plugin to extend an existing module. There is a range of specialized branches for different use cases and tasks. Some branches include small class stubs, which you can either delete or adjust to your use case. You can start from a branch or merge it into *master*. With the merging technique you can also combine multiple templates by merging their branches into `master`. Below is a list of branches and their content:

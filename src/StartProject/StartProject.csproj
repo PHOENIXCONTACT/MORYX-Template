@@ -168,6 +168,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj">
+      <Project>{98cc8a11-d88d-4fbc-9d0f-b78174eba969}</Project>
+      <Name>MyApplication.Module</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyApplication\MyApplication.csproj">
       <Project>{df4730d4-5db2-46a5-9f2b-c7b22e61268b}</Project>
       <Name>MyApplication</Name>

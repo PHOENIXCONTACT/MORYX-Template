@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DF4730D4-5DB2-46A5-9F2B-C7B22E61268B}</ProjectGuid>
+    <ProjectGuid>{98CC8A11-D88D-4FBC-9D0F-B78174EBA969}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MyApplication</RootNamespace>
-    <AssemblyName>MyApplication</AssemblyName>
+    <RootNamespace>MyApplication.Module</RootNamespace>
+    <AssemblyName>MyApplication.Module</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,18 +31,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Moryx, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.3.0.0-dev.81\lib\netstandard2.0\Moryx.dll</HintPath>
+    <Reference Include="Moryx, Version=3.0.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.3.0.0-dev.37\lib\netstandard2.0\Moryx.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.Runtime, Version=3.0.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Runtime.3.0.0-dev.37\lib\netstandard2.0\Moryx.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Moryx.Tools.Wcf, Version=3.0.0.37, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Tools.Wcf.3.0.0-dev.37\lib\net461\Moryx.Tools.Wcf.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+      <HintPath>..\..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,13 +58,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Facade\IMyFacade.cs" />
-    <Compile Include="Plugins\IMyModulesPlugin.cs" />
+    <Compile Include="Components\IMyComponent.cs" />
+    <Compile Include="Facade\MyFacade.cs" />
+    <Compile Include="Implementation\Component.cs" />
+    <Compile Include="ModuleController\ModuleConfig.cs" />
+    <Compile Include="ModuleController\ModuleConsole.cs" />
+    <Compile Include="ModuleController\ModuleController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyApplication\MyApplication.csproj">
+      <Project>{df4730d4-5db2-46a5-9f2b-c7b22e61268b}</Project>
+      <Name>MyApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
