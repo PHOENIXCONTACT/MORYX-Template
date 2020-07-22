@@ -2,12 +2,10 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// MORYX reads these attributes to determine your applications name and version
-
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StartProject")]
+[assembly: AssemblyTitle("MyApplication")]
 [assembly: AssemblyCompany("Your Company")]
 [assembly: AssemblyCopyright("Copyright © Your Company 2020")]
 

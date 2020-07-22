@@ -1,0 +1,6 @@
+{
+  "Host": "localhost",
+  "Port": 80,
+  "ClientId": "MyClient",
+  "ConfigState": "Generated"
+}
