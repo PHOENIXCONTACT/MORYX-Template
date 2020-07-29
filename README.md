@@ -21,7 +21,7 @@ The projects, that you create yourself, need to be loaded in MORYX. Add a refere
 
 ### Resources Quick Start
 
-The *ResourceManager* will fail upon start as it requires a database. First make sure you have [PostgreSQL installed](https://www.postgresql.org/download/), then start the application and open [Database configuration](http://localhost/maintenanceweb/#/databases). Configure the *Moryx.Resources.Model* and create the database. Afterwards restart the failed module, which should now be running with a notification because of the empty database.
+The *ResourceManager* will fail upon start as it requires a database. First make sure you have [PostgreSQL installed](https://www.postgresql.org/download/), then start the application and open [Database configuration](http://localhost/maintenanceweb/#/databases). Configure the *Moryx.Resources.Model* and create the database. Afterwards [restart the failed module](http://localhost/maintenanceweb/#/modules/ResourceManager), which should now be running with a notification because of the empty database.
 
 The next step is to add an instance of *ResourceInteraction* to use the Resource UI for adding and configuring resources. The *ResourceManager* is pre-configured with an initializer, that creates the interaction endpoint. After the application started and the *ResourceManager* is running, enter the following commands into the console:
 
