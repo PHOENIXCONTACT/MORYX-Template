@@ -1,6 +1,13 @@
 # MORYX Template
 
-[![Gitter](https://badges.gitter.im/MORYX-Industry/Development.svg)](https://gitter.im/MORYX-Industry/Development?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+<p align="center">    
+    <a href="https://stackoverflow.com/questions/tagged/moryx">
+        <img src="https://img.shields.io/badge/stackoverflow-ask-orange.svg" alt="Stackoverflow">
+    </a>
+    <a href="https://gitter.im/MORYX-Industry/Development?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
+        <img src="https://badges.gitter.im/MORYX-Industry/Development.svg" alt="Gitter">
+    </a>
+</p>
 
 Recommended repository template for quickly starting the development of MORYX modules, plugins or entire applications. This template has the necessary package feeds, a back-end (*Application.sln*) and front-end (*Application.UI.sln*) solution, each with a launchable *StartProject*. The back-end solution is also pre-configured with the *Maintenance* module and graphic interface [MaintenanceWeb](https://github.com/PHOENIXCONTACT/MORYX-MaintenanceWeb), which you can use to interact with modules and change their configuration. The empty project *MyApplication* is your projects root namespace. It may contain facade, interface and domain model definitions. Remove it, if you do not need cross project type definitions.
 
