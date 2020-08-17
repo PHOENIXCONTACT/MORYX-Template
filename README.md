@@ -4,8 +4,8 @@
     <a href="https://stackoverflow.com/questions/tagged/moryx">
         <img src="https://img.shields.io/badge/stackoverflow-ask-orange.svg" alt="Stackoverflow">
     </a>
-    <a href="https://gitter.im/MORYX-Industry/Development?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
-        <img src="https://badges.gitter.im/MORYX-Industry/Development.svg" alt="Gitter">
+    <a href="https://gitter.im/PHOENIXCONTACT/MORYX?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge">
+        <img src="https://badges.gitter.im/PHOENIXCONTACT/MORYX.svg" alt="Gitter">
     </a>
 </p>
 
