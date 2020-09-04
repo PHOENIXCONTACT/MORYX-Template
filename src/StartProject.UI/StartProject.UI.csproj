@@ -69,8 +69,8 @@
     <Reference Include="Moryx, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.3.0.0-dev.81\lib\netstandard2.0\Moryx.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.AbstractionLayer.UI, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.AbstractionLayer.UI.5.0.0-dev.55\lib\net461\Moryx.AbstractionLayer.UI.dll</HintPath>
+    <Reference Include="Moryx.AbstractionLayer.UI, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.AbstractionLayer.UI.5.0.0-dev.68\lib\net461\Moryx.AbstractionLayer.UI.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.ClientFramework, Version=3.0.0.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.ClientFramework.3.0.0-dev.26\lib\net461\Moryx.ClientFramework.dll</HintPath>
@@ -90,11 +90,11 @@
     <Reference Include="Moryx.Controls, Version=3.0.0.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Controls.3.0.0-dev.26\lib\net461\Moryx.Controls.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.Resources.UI, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.Resources.UI.5.0.0-dev.55\lib\net461\Moryx.Resources.UI.dll</HintPath>
+    <Reference Include="Moryx.Resources.UI, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Resources.UI.5.0.0-dev.68\lib\net461\Moryx.Resources.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.Resources.UI.Interaction, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.Resources.UI.Interaction.5.0.0-dev.55\lib\net461\Moryx.Resources.UI.Interaction.dll</HintPath>
+    <Reference Include="Moryx.Resources.UI.Interaction, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Resources.UI.Interaction.5.0.0-dev.68\lib\net461\Moryx.Resources.UI.Interaction.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.Tools.Wcf, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Tools.Wcf.3.0.0-dev.81\lib\net461\Moryx.Tools.Wcf.dll</HintPath>
