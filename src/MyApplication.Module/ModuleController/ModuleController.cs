@@ -1,4 +1,5 @@
-﻿using Moryx.Runtime.Container;
+﻿using System.ComponentModel;
+using Moryx.Runtime.Container;
 using Moryx.Runtime.Modules;
 using MyApplication.Facade;
 using MyApplication.Module.Components;
@@ -8,6 +9,7 @@ using MyApplication.Plugins;
 namespace MyApplication.Module.ModuleController
 {
     [ServerModule(ModuleName)]
+    [Description("Description of your module")]
     //public class ModuleController : ServerModuleBase<ModuleConfig> // No facade export
     public class ModuleController : ServerModuleFacadeControllerBase<ModuleConfig>, IFacadeContainer<IMyFacade> // Facade export
     {

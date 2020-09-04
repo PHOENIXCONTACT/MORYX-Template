@@ -7,12 +7,6 @@ namespace MyApplication.Module.ModuleController
     [ServerModuleConsole]
     public class ModuleConsole : IServerModuleConsole
     {
-        public string ExportDescription(DescriptionExportFormat format)
-        {
-            return "Console of MyModule. Possible commands:" + Environment.NewLine +
-                   "- hello {name}: Says hello";
-        }
-
         public void ExecuteCommand(string[] args, Action<string> outputStream)
         {
             if (args.Length < 2)
