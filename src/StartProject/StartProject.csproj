@@ -75,8 +75,8 @@
     <Reference Include="Moryx, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.3.0.0-dev.81\lib\netstandard2.0\Moryx.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.AbstractionLayer, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.AbstractionLayer.5.0.0-dev.55\lib\net461\Moryx.AbstractionLayer.dll</HintPath>
+    <Reference Include="Moryx.AbstractionLayer, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.AbstractionLayer.5.0.0-dev.68\lib\net461\Moryx.AbstractionLayer.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.Container, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Container.3.0.0-dev.81\lib\netstandard2.0\Moryx.Container.dll</HintPath>
@@ -87,11 +87,11 @@
     <Reference Include="Moryx.Model.PostgreSQL, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Model.PostgreSQL.3.0.0-dev.81\lib\net461\Moryx.Model.PostgreSQL.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.Products.Management, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.Products.Management.5.0.0-dev.55\lib\net461\Moryx.Products.Management.dll</HintPath>
+    <Reference Include="Moryx.Products.Management, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Products.Management.5.0.0-dev.68\lib\net461\Moryx.Products.Management.dll</HintPath>
     </Reference>
-    <Reference Include="Moryx.Products.Model, Version=5.0.0.55, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Moryx.Products.Model.5.0.0-dev.55\lib\net461\Moryx.Products.Model.dll</HintPath>
+    <Reference Include="Moryx.Products.Model, Version=5.0.0.68, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moryx.Products.Model.5.0.0-dev.68\lib\net461\Moryx.Products.Model.dll</HintPath>
     </Reference>
     <Reference Include="Moryx.Runtime, Version=3.0.0.81, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Moryx.Runtime.3.0.0-dev.81\lib\netstandard2.0\Moryx.Runtime.dll</HintPath>
