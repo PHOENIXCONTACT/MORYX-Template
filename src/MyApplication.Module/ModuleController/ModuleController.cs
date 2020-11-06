@@ -21,6 +21,10 @@ namespace MyApplication.Module.ModuleController
         //[Named(SomeConstants.Namespace)]
         //public IUnitOfWorkFactory MyModel { get; set; }
 
+        // Use wcf hosting
+        // This requires the package Moryx.Tools.Wcf
+        //public IWcfHostFactory HostFactory { get; set; }
+
         // Import a facade, e.g. IResourceManagement
         //[RequiredModuleApi(IsStartDependency = true, IsOptional = false)]
         //public IOtherFacade Dependency { get; set; }
@@ -32,12 +36,15 @@ namespace MyApplication.Module.ModuleController
         /// </summary>
         protected override void OnInitialize()
         {
+            // Register Wcf
+            //Container.RegisterWcf(HostFactory);
+
             // Register model
             //Container.SetInstance(MyModel);
 
             // Register required facade
             //Container.SetInstance(Dependency);
-            
+
             // Load plugins
             Container.LoadComponents<IMyModulesPlugin>();
         }

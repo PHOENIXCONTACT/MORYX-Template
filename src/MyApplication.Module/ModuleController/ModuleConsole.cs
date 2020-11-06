@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using Moryx.Runtime.Modules;
+using Moryx.Serialization;
 
 namespace MyApplication.Module.ModuleController
 {
@@ -19,7 +20,7 @@ namespace MyApplication.Module.ModuleController
                 outputStream(SayHello(args[1]));
         }
 
-        [EditorBrowsable]
+        [EntrySerialize]
         public string SayHello(string name)
         {
             return $"Hello {name}";
