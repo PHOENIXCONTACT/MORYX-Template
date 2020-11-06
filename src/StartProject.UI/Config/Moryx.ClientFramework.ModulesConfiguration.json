@@ -4,12 +4,6 @@
     "ShellName": "SimpleShell"
   },
   "Modules": [
-    {
-      "ModuleName": "Wcf Viewer",
-      "IsEnabled": true,
-      "SortIndex": 9999,
-      "Accesses": {}
-    }
   ],
   "ConfigState": "Generated"
 }
