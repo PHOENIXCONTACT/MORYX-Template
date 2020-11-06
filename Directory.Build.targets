@@ -39,7 +39,7 @@
     <PackageReference Update="Moryx.ClientFramework.Configurator" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.Kernel" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.SimpleShell" Version="$(MoryxClientFrameworkVersion)" />
-    <PackageReference Update="Moryx.Tools.WcfClient.UI.Viewer" Version="$(MoryxClientFrameworkVersion)" />
+    <PackageReference Update="Moryx.Tools.WcfClient.UI.Viewer" Version="$(MoryxClientFrameworkVersion)" />  
 
     <!--AbstractionLayer dependencies-->
     <PackageReference Update="Moryx.AbstractionLayer" Version="$(MoryxAbstractionLayerVersion)" />
