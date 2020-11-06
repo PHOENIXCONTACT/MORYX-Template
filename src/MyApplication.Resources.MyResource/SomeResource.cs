@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.Serialization;
 using Moryx.AbstractionLayer.Resources;
+using Moryx.Serialization;
 using MyApplication.Capabilities;
 
 namespace MyApplication.Resources.MyResource
@@ -8,7 +9,7 @@ namespace MyApplication.Resources.MyResource
     [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
     public class SomeResource : PublicResource, ISomeResource
     {
-        [DataMember, EditorBrowsable]
+        [DataMember, EntrySerialize]
         [Description("Configured value for the capabilities")]
         public int Value { get; set; }
 

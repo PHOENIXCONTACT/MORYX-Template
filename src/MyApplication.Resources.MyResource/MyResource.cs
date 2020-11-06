@@ -6,15 +6,16 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Resources;
+using Moryx.Serialization;
 
 namespace MyApplication.Resources.MyResource
 {
     public class MyResource : Resource
     {
-        [DataMember, EditorBrowsable]
+        [DataMember, EntrySerialize]
         public int Number { get; set; }
 
-        [EditorBrowsable, DisplayName("Do Foo")]
+        [EntrySerialize, DisplayName("Do Foo")]
         public void DoFoo()
         {
         }
