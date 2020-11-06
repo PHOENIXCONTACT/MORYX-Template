@@ -1,0 +1,11 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <!--PropertyGroup>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl> https://git-ctvc.europe.phoenixcontact.com/digitaltransformation/MAKMA.git</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+  </PropertyGroup-->
+</Project>
