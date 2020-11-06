@@ -4,7 +4,7 @@
   <PropertyGroup>
     <MoryxPlatformVersion>3.0.0-dev.221</MoryxPlatformVersion>
     <MoryxClientFrameworkVersion>3.0.0-dev.62</MoryxClientFrameworkVersion>
-    <MoryxMaintenanceWebVersion>3.0.0-dev.53</MoryxMaintenanceWebVersion>
+    <MoryxMaintenanceWebVersion>3.0.0-dev.53</MoryxMaintenanceWebVersion>    
     <MoryxAbstractionLayerVersion>5.0.0-dev.167</MoryxAbstractionLayerVersion>
   </PropertyGroup>
 
@@ -39,7 +39,7 @@
     <PackageReference Update="Moryx.ClientFramework.Configurator" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.Kernel" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.SimpleShell" Version="$(MoryxClientFrameworkVersion)" />
-    <PackageReference Update="Moryx.Tools.WcfClient.UI.Viewer" Version="$(MoryxClientFrameworkVersion)" />
+    <PackageReference Update="Moryx.Tools.WcfClient.UI.Viewer" Version="$(MoryxClientFrameworkVersion)" />  
 
     <!--AbstractionLayer dependencies-->
     <PackageReference Update="Moryx.AbstractionLayer" Version="$(MoryxAbstractionLayerVersion)" />
