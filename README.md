@@ -11,6 +11,8 @@
 
 Recommended repository template for quickly starting the development of MORYX modules, plugins or entire applications. This template has the necessary package feeds, a back-end (*Application.sln*) and front-end (*Application.UI.sln*) solution, each with a launchable *StartProject*. The back-end solution is also pre-configured with the *Maintenance* module and graphic interface [MaintenanceWeb](https://github.com/PHOENIXCONTACT/MORYX-MaintenanceWeb), which you can use to interact with modules and change their configuration. The empty project *MyApplication* is your projects root namespace. It may contain facade, interface and domain model definitions. Remove it, if you do not need cross project type definitions.
 
+This template also uses the SDK project style for simplified project definition with a *Directory.build.props* and *Directory.build.targets* file to centralize project information and package versions in a single place. We recommend using the *Directory.build.targets*  file to update MORYX packages and others instead of the standard NuGet Package Manager.
+
 ## Getting Started
 
 You can either use this repository as a template directly on GitHub or clone it like any other GIT repository. Afterwards just open the solutions and run the application. Per default this will require access to port 80, alternative you can configure a different port in the **WcfConfig* within the *StartProject*. While the server is running you can open the *MaintenanceWeb* at http://localhost/maintenanceweb/. The *Dashboard* gives you an overview of the application, *Modules* is used to interact and configure modules, *Models* lets you create databases and schemas for installed data models, while *Log* grants live access to all logs.
