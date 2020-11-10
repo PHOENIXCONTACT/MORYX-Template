@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
 
+  <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxPlatformVersion>3.0.0-dev.221</MoryxPlatformVersion>
-    <MoryxClientFrameworkVersion>3.0.0-dev.62</MoryxClientFrameworkVersion>
-    <MoryxMaintenanceWebVersion>3.0.0-dev.53</MoryxMaintenanceWebVersion>    
-    <MoryxAbstractionLayerVersion>5.0.0-dev.167</MoryxAbstractionLayerVersion>
+    <MoryxPlatformVersion>3.0.0-dev.232</MoryxPlatformVersion>
+    <MoryxClientFrameworkVersion>3.0.0-dev.66</MoryxClientFrameworkVersion>
+    <MoryxMaintenanceWebVersion>3.0.0-dev.57</MoryxMaintenanceWebVersion>    
+    <MoryxAbstractionLayerVersion>5.0.0-dev.171</MoryxAbstractionLayerVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
