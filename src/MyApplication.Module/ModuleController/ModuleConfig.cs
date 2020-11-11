@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Runtime.Serialization;
 using Moryx.Configuration;
 using Moryx.Runtime.Configuration;
@@ -21,5 +22,9 @@ namespace MyApplication.Module.ModuleController
         [PrimitiveValues(3, 7, 10, 42, 1337)]
         [Description("Select number from range of possible numbers")]
         public int LimitedNumber { get; set; }
+
+        [DataMember]
+        [Description("Names of team members")]
+        public List<string> Team { get; set; }
     }
 }
