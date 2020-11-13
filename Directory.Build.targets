@@ -3,10 +3,10 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxPlatformVersion>3.0.0-dev.232</MoryxPlatformVersion>
-    <MoryxClientFrameworkVersion>3.0.0-dev.66</MoryxClientFrameworkVersion>
-    <MoryxMaintenanceWebVersion>3.0.0-dev.57</MoryxMaintenanceWebVersion>    
-    <MoryxAbstractionLayerVersion>5.0.0-dev.171</MoryxAbstractionLayerVersion>
+    <MoryxPlatformVersion>3.0.0</MoryxPlatformVersion>
+    <MoryxClientFrameworkVersion>3.0.0</MoryxClientFrameworkVersion>
+    <MoryxMaintenanceWebVersion>3.0.0</MoryxMaintenanceWebVersion>    
+    <MoryxAbstractionLayerVersion>5.0.0</MoryxAbstractionLayerVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
