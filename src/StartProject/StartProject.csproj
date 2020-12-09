@@ -26,7 +26,7 @@
     <None Update="Config\log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Config\Moryx.Tools.Wcf.WcfConfig.json">
+    <None Update="Config\Moryx.Communication.PortConfig.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

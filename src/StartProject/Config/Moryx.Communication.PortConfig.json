@@ -2,7 +2,7 @@
   "Host": "localhost",
   "HttpPort": 80,
   "NetTcpPort": 816,
-  "ConfigState": "Valid",
+  "ConfigState": "Generated",
   "OpenTimeout": 30,
   "CloseTimeout": 30,
   "SendTimeout": 30,
