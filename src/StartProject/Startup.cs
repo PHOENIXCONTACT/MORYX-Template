@@ -5,7 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Moryx;
 using Moryx.Asp.Integration;
 
-namespace StartProject.Asp
+namespace StartProject
 {
     public class Startup
     {
