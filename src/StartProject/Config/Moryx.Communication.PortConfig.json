@@ -1,7 +1,7 @@
 {
   "Host": "localhost",
-  "HttpPort": 80,
-  "NetTcpPort": 816,
+  "HttpPort": 5002,
+  "NetTcpPort": 5003,
   "ConfigState": "Generated",
   "OpenTimeout": 30,
   "CloseTimeout": 30,
