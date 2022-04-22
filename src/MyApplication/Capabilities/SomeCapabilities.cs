@@ -2,7 +2,7 @@
 
 namespace MyApplication.Capabilities
 {
-    public class SomeCapabilities : ConcreteCapabilities
+    public class SomeCapabilities : CapabilitiesBase
     {
         public int Value { get; set; }
 
