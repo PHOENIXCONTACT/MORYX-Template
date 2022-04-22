@@ -1,36 +1,28 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net45</TargetFramework>
-    <Description>Executable of your application</Description>
-    <OutputType>Exe</OutputType>
-    <StartupObject>StartProject.Program</StartupObject>
-    <PlatformTarget>x86</PlatformTarget>
-    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
+	
   <ItemGroup>
-    <PackageReference Include="Common.Logging.Log4Net208" Version="3.4.1" />
-    <PackageReference Include="log4net" Version="2.0.8" />
+	<PackageReference Include="Moryx.Runtime.Maintenance" />
+	<PackageReference Include="Moryx.Runtime.Kernel" />
+    <PackageReference Include="Moryx.Runtime.Kestrel" />
+    <PackageReference Include="Moryx.Asp.Extensions" />
 
-    <PackageReference Include="Moryx.Runtime.Kernel" />
-    <PackageReference Include="Moryx.Runtime.Maintenance" />
-    <PackageReference Include="Moryx.Runtime.Maintenance.Web" />
+	<PackageReference Include="Moryx.Runtime.Maintenance.Web" />
 
     <PackageReference Include="Moryx.Products.Management" />
   </ItemGroup>
 
-  <ItemGroup>  
-    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Update="Config\log4net.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Config\Moryx.Communication.PortConfig.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+    <ItemGroup>
+        <None Update="Config\Moryx.Communication.PortConfig.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
 
 </Project>
