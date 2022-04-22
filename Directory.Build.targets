@@ -3,10 +3,11 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxPlatformVersion>3.0.0</MoryxPlatformVersion>
-    <MoryxClientFrameworkVersion>3.0.0</MoryxClientFrameworkVersion>
-    <MoryxMaintenanceWebVersion>3.0.0</MoryxMaintenanceWebVersion>    
-    <MoryxAbstractionLayerVersion>5.0.0</MoryxAbstractionLayerVersion>
+    <MoryxPlatformVersion>3.4.1</MoryxPlatformVersion>
+    <MoryxClientFrameworkVersion>3.2.1</MoryxClientFrameworkVersion>
+    <MoryxMaintenanceWebVersion>3.1.1</MoryxMaintenanceWebVersion>    
+    <MoryxAbstractionLayerVersion>5.12.1</MoryxAbstractionLayerVersion>
+    <MoryxFactoryVersion>4.2.0</MoryxFactoryVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
@@ -24,11 +25,11 @@
     <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Container" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Runtime" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime.Wcf" Version="$(MoryxPlatformVersion)" />
+    <PackageReference Update="Moryx.Runtime.Kestrel" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Runtime.Maintenance" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Runtime.SmokeTest" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Tools.Wcf" Version="$(MoryxPlatformVersion)" />
+    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxPlatformVersion)"/>
     <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxPlatformVersion)" />
 
     <!--Maintenance dependencies-->
@@ -40,13 +41,11 @@
     <PackageReference Update="Moryx.ClientFramework.Configurator" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.Kernel" Version="$(MoryxClientFrameworkVersion)" />
     <PackageReference Update="Moryx.ClientFramework.SimpleShell" Version="$(MoryxClientFrameworkVersion)" />
-    <PackageReference Update="Moryx.Tools.WcfClient.UI.Viewer" Version="$(MoryxClientFrameworkVersion)" />  
 
     <!--AbstractionLayer dependencies-->
     <PackageReference Update="Moryx.AbstractionLayer" Version="$(MoryxAbstractionLayerVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.TestTools" Version="$(MoryxAbstractionLayerVersion)" />
     <PackageReference Update="Moryx.Resources.Interaction" Version="$(MoryxAbstractionLayerVersion)" />
-    <PackageReference Update="Moryx.Resources.Wcf" Version="$(MoryxAbstractionLayerVersion)" />
     <PackageReference Update="Moryx.Products.Management" Version="$(MoryxAbstractionLayerVersion)" />
     <PackageReference Update="Moryx.Resources.Management" Version="$(MoryxAbstractionLayerVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.UI" Version="$(MoryxAbstractionLayerVersion)" />
