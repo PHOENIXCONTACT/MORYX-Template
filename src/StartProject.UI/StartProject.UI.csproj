@@ -4,7 +4,7 @@
     <TargetFramework>net45</TargetFramework>
     <UseWPF>true</UseWPF>
     <OutputType>WinExe</OutputType>
-    <StartupObject>StartProject.UI.Program</StartupObject>    
+    <StartupObject>StartProject.UI.Program</StartupObject>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 

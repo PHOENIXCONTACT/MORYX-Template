@@ -3,9 +3,9 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxPlatformVersion>3.4.1</MoryxPlatformVersion>
+    <MoryxPlatformVersion>3.4.2</MoryxPlatformVersion>
     <MoryxClientFrameworkVersion>3.2.1</MoryxClientFrameworkVersion>
-    <MoryxMaintenanceWebVersion>3.1.1</MoryxMaintenanceWebVersion>    
+    <MoryxMaintenanceWebVersion>3.1.1</MoryxMaintenanceWebVersion>
     <MoryxAbstractionLayerVersion>5.12.1</MoryxAbstractionLayerVersion>
     <MoryxFactoryVersion>4.2.0</MoryxFactoryVersion>
   </PropertyGroup>
@@ -20,7 +20,7 @@
 
     <!--Platform dependencies-->
     <PackageReference Update="Moryx" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxPlatformVersion)" />    
+    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Model.InMemory" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxPlatformVersion)" />
     <PackageReference Update="Moryx.Container" Version="$(MoryxPlatformVersion)" />
