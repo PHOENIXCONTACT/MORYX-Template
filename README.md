@@ -1,6 +1,6 @@
 # MORYX Template
 
-<p align="center">    
+<p align="center">
     <a href="https://stackoverflow.com/questions/tagged/moryx">
         <img src="https://img.shields.io/badge/stackoverflow-ask-orange.svg" alt="Stackoverflow">
     </a>
@@ -17,7 +17,7 @@ This template also uses the SDK project style for simplified project definition 
 
 You can either use this repository as a template directly on GitHub or clone it like any other GIT repository. Afterwards just open the solutions and run the application. Per default this will require access to port 5002, alternative you can configure a different port in the **PortConfig* within the *StartProject*. While the server is running you can open the *MaintenanceWeb* at http://localhost:5002/maintenanceweb/ or the appropriate host (127.0.0.1 / host name / ...). The *Dashboard* gives you an overview of the application, *Modules* is used to interact and configure modules, *Models* lets you create databases and schemas for installed data models, while *Log* grants live access to all logs.
 
-You can extend your solution by adding more packages to your *StartProject* or creating a MORYX package of your own. This repository includes [branches](#branches) with templates for common MORYX repositories. For details on different MORYX package types and documentation refer to the [MORYX-Platform](https://github.com/PHOENIXCONTACT/MORYX-Platform), [MORYX-CientFramework](https://github.com/PHOENIXCONTACT/MORYX-ClientFramework) and [MORYX-AbstractionLayer](https://github.com/PHOENIXCONTACT/MORYX-AbstractionLayer).
+You can extend your solution by adding more packages to your *StartProject* or creating a MORYX package of your own. This repository includes [branches](#branches) with templates for common MORYX repositories. For details on different MORYX package types and documentation refer to the [MORYX-Core](https://github.com/PHOENIXCONTACT/MORYX-Core), [MORYX-CientFramework](https://github.com/PHOENIXCONTACT/MORYX-ClientFramework) and [MORYX-AbstractionLayer](https://github.com/PHOENIXCONTACT/MORYX-AbstractionLayer).
 
 The projects, that you create yourself, need to be loaded in MORYX. Add a reference to your project in the *StartProject*. This will make sure, that your project is build every time you start debugging. It also ensures, that all your projects dependencies are present in the *StartProjects* execution directory and that the binary is removed on clean-up.
 
@@ -26,7 +26,7 @@ The projects, that you create yourself, need to be loaded in MORYX. Add a refere
 The *master* branch of this template is the bare minimum most developers will need to start, whether the build an application, a reusable module or a plugin to extend an existing module. There is a range of specialized branches for different use cases and tasks. Some branches include small class stubs, which you can either delete or adjust to your use case. You can start from a branch or merge it into *master*. With the merging technique you can also combine multiple templates by merging their branches into `master`. Below is a list of branches and their content:
 
 - **master:** Base template with front- and back-end solution, *StartProject** and pre-installed *Maintenance* and *MaintenanceWeb*.
-    - **[module](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/module):** Empty module project with standard directory structure, *ModuleController*, *ModuleConfig* and *ModuleConsole*. 
+    - **[module](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/module):** Empty module project with standard directory structure, *ModuleController*, *ModuleConfig* and *ModuleConsole*.
     - **[al/resources](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/al/resources):** Pre-installed *ResourceManagement* packages in front- and back-end, empty resource project, prepared configuration and setup instructions.
     - **[al/products](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/al/products):** Pre-installed *ProductManagement* packages in front- and back-end, product definition stubs, prepared configuration and setup instructions.
 

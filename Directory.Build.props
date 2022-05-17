@@ -1,6 +1,6 @@
 <Project>
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -9,7 +9,7 @@
     <Product>Your Product</Product>
 
     <CurrentYear>$([System.DateTime]::Now.ToString("yyyy"))</CurrentYear>
-    <Copyright>Copyright © $(Company) $(CurrentYear)</Copyright>    
+    <Copyright>Copyright © $(Company) $(CurrentYear)</Copyright>
   </PropertyGroup>
 
 </Project>
