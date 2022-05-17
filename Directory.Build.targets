@@ -3,7 +3,7 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxPlatformVersion>3.4.2</MoryxPlatformVersion>
+    <MoryxCoreVersion>3.4.2</MoryxCoreVersion>
     <MoryxClientFrameworkVersion>3.2.1</MoryxClientFrameworkVersion>
     <MoryxMaintenanceWebVersion>3.1.1</MoryxMaintenanceWebVersion>
     <MoryxAbstractionLayerVersion>5.12.1</MoryxAbstractionLayerVersion>
@@ -19,18 +19,18 @@
     <PackageReference Update="NUnit" Version="3.12.0" />
 
     <!--Platform dependencies-->
-    <PackageReference Update="Moryx" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Model.InMemory" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Container" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime.Kestrel" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime.Maintenance" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Runtime.SmokeTest" Version="$(MoryxPlatformVersion)" />
-    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxPlatformVersion)"/>
-    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxPlatformVersion)" />
+    <PackageReference Update="Moryx" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Model.InMemory" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Container" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Runtime" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Runtime.Kestrel" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Runtime.Maintenance" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Runtime.SmokeTest" Version="$(MoryxCoreVersion)" />
+    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxCoreVersion)"/>
+    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxCoreVersion)" />
 
     <!--Maintenance dependencies-->
     <PackageReference Update="Moryx.Runtime.Maintenance.Web" Version="$(MoryxMaintenanceWebVersion)" />
