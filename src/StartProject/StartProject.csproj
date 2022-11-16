@@ -10,11 +10,15 @@
     <PackageReference Include="Moryx.Runtime.Kestrel" />
     <PackageReference Include="Moryx.Asp.Extensions" />
 
-    <PackageReference Include="Moryx.Runtime.Maintenance.Web" />
+	<PackageReference Include="Moryx.Runtime.Maintenance.Web" />
+
+    <PackageReference Include="Moryx.Resources.Interaction" />
+    <PackageReference Include="Moryx.Resources.Management" />
   </ItemGroup>
 
-  <ItemGroup>
+  <ItemGroup>  
     <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+    <ProjectReference Include="..\MyApplication.Resources.MyResource\MyApplication.Resources.MyResource.csproj" />
   </ItemGroup>
 
   <ItemGroup>

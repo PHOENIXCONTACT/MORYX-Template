@@ -3,12 +3,15 @@
   <PropertyGroup>
     <TargetFrameworks>net5.0</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Description>Core namespace of your application</Description>
+    <Description>Package for your resource definitions</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Moryx" />
     <PackageReference Include="Moryx.AbstractionLayer" />
+  </ItemGroup>  
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
   </ItemGroup>
 
 </Project>

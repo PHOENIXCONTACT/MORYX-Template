@@ -23,6 +23,8 @@
     <PackageReference Include="Moryx.ClientFramework.Configurator" />
     <PackageReference Include="Moryx.ClientFramework.Kernel" />
     <PackageReference Include="Moryx.ClientFramework.SimpleShell" />
+
+    <PackageReference Include="Moryx.Resources.UI.Interaction" />
   </ItemGroup>
 
   <ItemGroup>
