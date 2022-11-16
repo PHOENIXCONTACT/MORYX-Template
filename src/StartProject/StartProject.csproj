@@ -21,6 +21,7 @@
   <ItemGroup>  
     <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
     <ProjectReference Include="..\MyApplication.Resources.MyResource\MyApplication.Resources.MyResource.csproj" />
+    <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -28,5 +29,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+    </ItemGroup>
 
 </Project>
