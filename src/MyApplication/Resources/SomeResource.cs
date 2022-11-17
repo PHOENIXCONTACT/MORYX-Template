@@ -4,7 +4,7 @@ using Moryx.AbstractionLayer.Resources;
 using Moryx.Serialization;
 using MyApplication.Capabilities;
 
-namespace MyApplication.Resources.MyResource
+namespace MyApplication.Resources
 {
     [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
     public class SomeResource : PublicResource, ISomeResource

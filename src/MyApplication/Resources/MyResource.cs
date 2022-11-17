@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.Serialization;
 
-namespace MyApplication.Resources.MyResource
+namespace MyApplication.Resources
 {
     public class MyResource : Resource
     {
