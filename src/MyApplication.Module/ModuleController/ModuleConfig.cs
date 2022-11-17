@@ -4,7 +4,6 @@ using System.Runtime.Serialization;
 using Moryx.Configuration;
 using Moryx.Runtime.Configuration;
 using Moryx.Serialization;
-using MyApplication.Plugins;
 
 namespace MyApplication.Module.ModuleController
 {

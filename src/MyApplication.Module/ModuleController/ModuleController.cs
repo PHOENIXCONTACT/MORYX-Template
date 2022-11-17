@@ -1,10 +1,8 @@
 ﻿using System.ComponentModel;
 using Moryx.Runtime.Container;
 using Moryx.Runtime.Modules;
-using MyApplication.Facade;
 using MyApplication.Module.Components;
 using MyApplication.Module.Facade;
-using MyApplication.Plugins;
 
 namespace MyApplication.Module.ModuleController
 {
@@ -44,9 +42,6 @@ namespace MyApplication.Module.ModuleController
 
             // Register required facade
             //Container.SetInstance(Dependency);
-
-            // Load plugins
-            Container.LoadComponents<IMyModulesPlugin>();
         }
 
         /// <summary>

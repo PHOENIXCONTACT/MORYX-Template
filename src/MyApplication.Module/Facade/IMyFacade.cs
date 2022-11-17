@@ -1,4 +1,4 @@
-﻿namespace MyApplication.Facade
+﻿namespace MyApplication.Module.Facade
 {
     public interface IMyFacade
     {

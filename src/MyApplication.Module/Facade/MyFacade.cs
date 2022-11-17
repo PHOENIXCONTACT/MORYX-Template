@@ -1,6 +1,5 @@
 ﻿using System;
 using Moryx.Runtime.Modules;
-using MyApplication.Facade;
 using MyApplication.Module.Components;
 
 namespace MyApplication.Module.Facade

@@ -10,8 +10,4 @@
     <PackageReference Include="Moryx.Runtime" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
-  </ItemGroup>
-
 </Project>

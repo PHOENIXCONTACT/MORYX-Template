@@ -18,9 +18,7 @@
     <PackageReference Include="Moryx.Products.Management" />
   </ItemGroup>
 
-  <ItemGroup>  
-    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
-    <ProjectReference Include="..\MyApplication.Resources.MyResource\MyApplication.Resources.MyResource.csproj" />
+  <ItemGroup>
     <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj" />
   </ItemGroup>
 
