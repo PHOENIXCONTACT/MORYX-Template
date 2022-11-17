@@ -3,10 +3,10 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxCoreVersion>3.4.2</MoryxCoreVersion>
+    <MoryxCoreVersion>3.7.0</MoryxCoreVersion>
     <MoryxClientFrameworkVersion>3.2.1</MoryxClientFrameworkVersion>
     <MoryxMaintenanceWebVersion>3.1.1</MoryxMaintenanceWebVersion>
-    <MoryxAbstractionLayerVersion>5.12.1</MoryxAbstractionLayerVersion>
+    <MoryxAbstractionLayerVersion>5.13.1</MoryxAbstractionLayerVersion>
     <MoryxFactoryVersion>4.2.0</MoryxFactoryVersion>
   </PropertyGroup>
 
