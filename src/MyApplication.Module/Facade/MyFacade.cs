@@ -17,5 +17,7 @@ namespace MyApplication.Module.Facade
         }
 
         public Action ValidateHealthState { get; set; }
+
+        public int Value => 42;
     }
 }

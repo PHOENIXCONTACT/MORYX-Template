@@ -5,12 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Moryx.Runtime.Maintenance" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+
+    <PackageReference Include="Moryx.Runtime.Endpoints" />
+    <PackageReference Include="Moryx.Maintenance.Web" />
     <PackageReference Include="Moryx.Runtime.Kernel" />
     <PackageReference Include="Moryx.Runtime.Kestrel" />
     <PackageReference Include="Moryx.Asp.Extensions" />
-
-	<PackageReference Include="Moryx.Runtime.Maintenance.Web" />
 
     <PackageReference Include="Moryx.Resources.Interaction" />
     <PackageReference Include="Moryx.Resources.Management" />

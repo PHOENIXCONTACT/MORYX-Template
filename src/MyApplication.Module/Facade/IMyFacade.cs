@@ -2,5 +2,6 @@
 {
     public interface IMyFacade
     {
+        int Value { get; }
     }
 }

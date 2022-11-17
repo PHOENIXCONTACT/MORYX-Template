@@ -1,0 +1,11 @@
+﻿@page
+@using MyApplication.Module.Facade
+@inject IMyFacade facade;
+@model IndexModel
+
+
+<div class="text-center">
+    <p>Redirect to <a href="/Maintenance">MORYX Maintenance</a>.</p>
+
+    <p>Facade value is @(facade.Value)</p>
+</div>
