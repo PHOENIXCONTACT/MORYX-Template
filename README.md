@@ -50,17 +50,6 @@ The modules entry class *ModuleController* is prepared for usage with or without
 
 You can interact with the module through console or *MaintenanceWeb*. To invoke the `SayHello`-method you can type "exec MyModule hello Name" or "enter MyModule" followed by "hello Name". To remove the scoped mode type "bye".
 
-## Branches
-
-The *master* branch of this template is the bare minimum most developers will need to start, whether the build an application, a reusable module or a plugin to extend an existing module. There is a range of specialized branches for different use cases and tasks. Some branches include small class stubs, which you can either delete or adjust to your use case. You can start from a branch or merge it into *master*. With the merging technique you can also combine multiple templates by merging their branches into `master`. Below is a list of branches and their content:
-
-- **master:** Base template with front- and back-end solution, *StartProject** and pre-installed *Maintenance* and *MaintenanceWeb*.
-    - **[module](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/module):** Empty module project with standard directory structure, *ModuleController*, *ModuleConfig* and *ModuleConsole*.
-    - **[al/resources](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/al/resources):** Pre-installed *ResourceManagement* packages in front- and back-end, empty resource project, prepared configuration and setup instructions.
-    - **[al/products](https://github.com/PHOENIXCONTACT/MORYX-Template/tree/al/products):** Pre-installed *ProductManagement* packages in front- and back-end, product definition stubs, prepared configuration and setup instructions.
-
-**Note:** When you use this as a template on GitHub all branches are rewritten as initial commits and they lose their common ancestry, therefore can no longer be merged. The solution is to use `git replace --graft <template_branch> HEAD` from `master` **before** merging any branch. This will rewrite the commits parent and restore the lost ancestry. Afterwards you can use standard `git merge <template_branch>`. After assembling your initial template, remove all other branches for a clean repository.
-
 ## Inspirations
 
 For inspiration, best practices and reusable packages, take a look at the MORYX based projects below. Open an issue or pull request, if you would like to add your project to the list.
