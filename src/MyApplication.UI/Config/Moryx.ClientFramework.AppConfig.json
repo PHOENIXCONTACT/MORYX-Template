@@ -1,9 +1,0 @@
-{
-  "Name": "MyApplication",
-  "Application": "HeartOfLead_XI2A",
-  "RunMode": "Config_RunMode",
-  "OpenConfigWithControl": true,
-  "LimitInstances": false,
-  "ViewPreset": "Default",
-  "ConfigState": "Generated"
-}

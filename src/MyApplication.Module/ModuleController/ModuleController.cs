@@ -1,4 +1,7 @@
 ﻿using System.ComponentModel;
+using Microsoft.Extensions.Logging;
+using Moryx.Configuration;
+using Moryx.Container;
 using Moryx.Runtime.Container;
 using Moryx.Runtime.Modules;
 using MyApplication.Module.Components;
@@ -6,7 +9,6 @@ using MyApplication.Module.Facade;
 
 namespace MyApplication.Module.ModuleController
 {
-    [ServerModule(ModuleName)]
     [Description("Description of your module")]
     //public class ModuleController : ServerModuleBase<ModuleConfig> // No facade export
     public class ModuleController : ServerModuleFacadeControllerBase<ModuleConfig>, IFacadeContainer<IMyFacade> // Facade export
@@ -19,13 +21,17 @@ namespace MyApplication.Module.ModuleController
         //[Named(SomeConstants.Namespace)]
         //public IUnitOfWorkFactory MyModel { get; set; }
 
-        // Use wcf hosting
-        // This requires the package Moryx.Tools.Wcf
-        //public IWcfHostFactory HostFactory { get; set; }
-
         // Import a facade, e.g. IResourceManagement
         //[RequiredModuleApi(IsStartDependency = true, IsOptional = false)]
         //public IOtherFacade Dependency { get; set; }
+
+        /// <summary>
+        /// Create a new instance of the module
+        /// </summary>
+        public ModuleController(IModuleContainerFactory containerFactory, IConfigManager configManager, ILoggerFactory loggerFactory) 
+            : base(containerFactory, configManager, loggerFactory)
+        {
+        }
 
         #region State transition
 
@@ -34,8 +40,6 @@ namespace MyApplication.Module.ModuleController
         /// </summary>
         protected override void OnInitialize()
         {
-            // Register Wcf
-            //Container.RegisterWcf(HostFactory);
 
             // Register model
             //Container.SetInstance(MyModel);

@@ -1,38 +1,39 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Moryx.Asp.Integration;
+using Moryx.Model;
 using Moryx.Runtime.Kernel;
+using Moryx.Tools;
 using System.IO;
 
 namespace StartProject.Asp
 {
     public class Program
     {
-        public static int Main(string[] args)
+        public static void Main(string[] args)
         {
-            var directory = Directory.GetCurrentDirectory();
-
-            // MORYX modifies current directory
-            var moryxRuntime = new HeartOfGold(args);
-            moryxRuntime.Load();
+            AppDomainBuilder.LoadAssemblies();
 
             var host = Host.CreateDefaultBuilder(args)
                 .ConfigureServices(serviceCollection =>
                 {
-                    serviceCollection.AddMoryxKernel(moryxRuntime);
-                    serviceCollection.AddMoryxFacades(moryxRuntime);
+                    serviceCollection.AddMoryxKernel();
+                    serviceCollection.AddMoryxModels();
+                    serviceCollection.AddMoryxModules();
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseContentRoot(directory);
                     webBuilder.UseStartup<Startup>();
-                }).Build();
+                    webBuilder.UseIISIntegration();
+                })
+                .Build();
 
-            host.Start();
-            var result = moryxRuntime.Execute();
-            host.Dispose();
+            host.Services.UseMoryxConfigurations("Config");
+            host.Services.StartMoryxModules();
 
-            return (int)result;
+            host.Run();
+
+            host.Services.StopMoryxModules();
         }
     }
 }
