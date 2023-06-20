@@ -17,10 +17,10 @@ The empty project *MyApplication* is your projects root namespace. It may contai
 
 ## Overview of the different projects
 
-- *Moryx.MyApplication*: Additional classes for your application like for example ProductTypes
-- *Moryx.MyApplication.Tests*: Unit Tests
-- *Moryx.MyApplication.Module*: Your new Module
-- *StartProject*: Starts the application, contains references to all projects exept for tests
+- *MyApplication*: Additional classes for your application like for example ProductTypes
+- *MyApplication.Resources*: Contains Resources for your project
+- *MyApplication.Module*: Your new Module
+- *MyApplicaten.Exe*: Starts the application, contains references to all projects exept for tests
 
 ## Getting Started
 
