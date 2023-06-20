@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+	</PropertyGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="Moryx.AbstractionLayer" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+	</ItemGroup>
+
+
+</Project>
