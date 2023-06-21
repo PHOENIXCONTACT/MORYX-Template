@@ -17,6 +17,8 @@
     <PackageReference Include="Moryx.Resources.Management" />
 
     <PackageReference Include="Moryx.Products.Management" />
+    <PackageReference Include="Moryx.AbstractionLayer.Resources.Endpoints" />
+    <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
   </ItemGroup>
 
   <ItemGroup>

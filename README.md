@@ -32,10 +32,6 @@ You can either use this repository as a template directly on GitLab or clone it 
 - Influx 1.x (optional)
 - Grafana (for dashboards)
 
-### Get all your licenses running
-This project runs with developer licenses. The licenses end on `WibuCmRaU`. You need the `CodeMeter Control Center`, where you can add those files via drag and drop or by double clicking the license after opening from visual studio. In any case you should install the PHOENIX CONTACT Activation Wizard available on the [PHOENIX CONTACT page](https://www.phoenixcontact.com/de-de/produkte/programmier-software-plcnext-engineer-1046008) under Downloads->Software
-
-
 ### Run the application
 Open the solutions and run the application. Per default this will require access to port 5000, alternative you can configure a different port in the *launchSettings.json* within the *Properties* of the *StartProject*. While the server is running you can open the *CommandCenter* at https://localhost:5000/CommandCenter#/. [Modules](https://localhost:5000/CommandCenter#/modules) is used to interact and configure modules, while [Databases](https://localhost:5000/CommandCenter#/databases) lets you configure, create and delete databases for installed data models. Some modules like the *ResourceManager* require a database in order to start. You can choose between *PostgreSQL* und *SQlite*. 
 
@@ -51,7 +47,6 @@ The *ProductManager* needs a database for its *Moryx.Products.Model*. First make
 Once you defined your product types and instances, configure the *ProductStorage*, either manually or by using the `AutoConfigurator` accessible through the *ProductManager* [console](http://localhost/maintenanceweb/#/modules/ProductManager/console). Once the module is running, start the front-end and you can create and configure products.
 
 To access products outside the *ProductManager*, import the `IProductManagement` facade in your module and register it in the container.
-
 
 ### Resources Quick Start
 
