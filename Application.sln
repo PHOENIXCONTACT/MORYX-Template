@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication.Module", "src
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication", "src\MyApplication\MyApplication.csproj", "{1AB5A156-FF0D-45A0-B6A8-D3A91C1CAA17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication.Resource", "src\MyApplication.Resources\MyApplication.Resource.csproj", "{4EA76D0A-14A4-4B52-B847-BF6CEAEC4B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication.Resources", "src\MyApplication.Resources\MyApplication.Resources.csproj", "{4EA76D0A-14A4-4B52-B847-BF6CEAEC4B0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
