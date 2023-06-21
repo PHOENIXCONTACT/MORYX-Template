@@ -15,19 +15,33 @@
     <PackageReference Include="Moryx.Asp.Extensions" />
 
     <PackageReference Include="Moryx.Resources.Management" />
-
-    <PackageReference Include="Moryx.Products.Management" />
     <PackageReference Include="Moryx.AbstractionLayer.Resources.Endpoints" />
+    <PackageReference Include="Moryx.Resources.Web" />
+    <PackageReference Include="Moryx.Products.Management" />
+    <PackageReference Include="Moryx.Products.Web" />
     <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
+    
+    <PackageReference Include="Moryx.Launcher" />
+
+    <PackageReference Include="Wibu.CodeMeter" Version="7.21.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj" />
+    <ProjectReference Include="..\MyApplication.Resources\MyApplication.Resources.csproj" />
+    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
   </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Config\" />
-      <Folder Include="Controllers\" />
     </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
+  </ItemGroup>
 
 </Project>

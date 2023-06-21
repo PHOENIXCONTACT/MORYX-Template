@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
+using Moryx.Launcher;
 
 namespace StartProject.Asp
 {
@@ -24,7 +25,9 @@ namespace StartProject.Asp
         // This method is optional for the Startup class.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IShellNavigator, ShellNavigator>();
             services.AddSingleton<IAuthorizationPolicyProvider, ExamplePolicyProvider>();
+
             services.AddLocalization();
 
             services.AddCors(options =>
@@ -73,6 +76,8 @@ namespace StartProject.Asp
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseMoryxLocalization();
 
             app.UseEndpoints(endpoints =>
             {

@@ -5,6 +5,8 @@
   <PropertyGroup>
     <MoryxFrameworkVersion>6.0.3</MoryxFrameworkVersion>
     <MoryxFactoryVersion>6.1.0</MoryxFactoryVersion>
+    <MoryxFrameworkWebVersion>6.0.3</MoryxFrameworkWebVersion>
+    <MoryxControlSystemVersion>6.2.2</MoryxControlSystemVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
@@ -32,6 +34,14 @@
 	  <PackageReference Update="Moryx.Products.Management" Version="$(MoryxFrameworkVersion)" />
 	  <PackageReference Update="Moryx.AbstractionLayer.Resources.Endpoints" Version="$(MoryxFrameworkVersion)" />
 	  <PackageReference Update="Moryx.AbstractionLayer.Products.Endpoints" Version="$(MoryxFrameworkVersion)" />
+
+    <!-- Framework Web dependencies -->
+    <PackageReference Update="Moryx.Resources.Web" Version="$(MoryxFrameworkWebVersion)" />
+    <PackageReference Update="Moryx.Products.Web" Version="$(MoryxFrameworkWebVersion)" />
+
+    <!-- ControlSystem dependencies -->
+    <PackageReference Update="Moryx.Launcher" Version="$(MoryxControlSystemVersion)" />
+
   </ItemGroup>
 
 </Project>
