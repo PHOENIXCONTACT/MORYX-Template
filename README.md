@@ -22,6 +22,20 @@ The empty project *MyApplication* is your projects root namespace. It may contai
 - *MyApplication.Module*: Your new Module
 - *MyApplicaten.Exe*: Starts the application, contains references to all projects exept for tests
 
+## Get all your licenses running
+This project runs with developer licenses. The licenses end on `WibuCmRaU`. You need the `CodeMeter Control Center`, where you can add those files via drag and drop.
+In order to get those licenses, remove the following lines from the `StartProject.csproj`.
+```
+<ItemGroup>
+    <Compile Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
+</ItemGroup>
+
+<ItemGroup>
+    <None Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
+</ItemGroup>
+```
+Then all the licenses should appear in the project explorer. Drag and drop them to the control center and then add those lines again.
+
 ## Getting Started
 
 You can either use this repository as a template directly on GitLab or clone it like any other GIT repository. 
