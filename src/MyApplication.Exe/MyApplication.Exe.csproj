@@ -39,9 +39,11 @@
   <ItemGroup>
     <Compile Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
-  </ItemGroup>
+ 
+	<ItemGroup>
+		<None Include="$(NugetPackageRoot)\**\*.WibuCmRaU">
+			<Link>%(Filename)%(Extension)</Link>
+		</None>
+	</ItemGroup>
 
 </Project>
