@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace StartProject.Asp
 {
@@ -25,7 +26,22 @@ namespace StartProject.Asp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IAuthorizationPolicyProvider, ExamplePolicyProvider>();
+
             services.AddLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("de-De"),
+                    new CultureInfo("en-De"),
+                    new CultureInfo("it-De"),
+                    new CultureInfo("zh-Hans"),
+                };
+
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
 
             services.AddCors(options =>
             {
@@ -61,6 +77,8 @@ namespace StartProject.Asp
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+
+            app.UseRequestLocalization();
 
             app.UseStaticFiles();
 
