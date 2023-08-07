@@ -3,8 +3,8 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxFrameworkVersion>6.0.3</MoryxFrameworkVersion>
-    <MoryxFactoryVersion>6.1.0</MoryxFactoryVersion>
+    <MoryxFrameworkVersion>6.1.3</MoryxFrameworkVersion>
+    <MoryxFactoryVersion>6.1.1</MoryxFactoryVersion>
     <MoryxFrameworkWebVersion>6.0.3</MoryxFrameworkWebVersion>
     <MoryxControlSystemVersion>6.2.2</MoryxControlSystemVersion>
   </PropertyGroup>
