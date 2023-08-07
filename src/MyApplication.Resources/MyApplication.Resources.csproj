@@ -6,6 +6,8 @@
 	
 	<ItemGroup>
 		<PackageReference Include="Moryx.AbstractionLayer" />
+		<PackageReference Include="Moryx.ControlSystem" />
+		<PackageReference Include="Moryx.Drivers.Simulation" />
 	</ItemGroup>
 
 	<ItemGroup>

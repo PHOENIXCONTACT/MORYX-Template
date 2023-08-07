@@ -5,7 +5,8 @@
   </PropertyGroup>
 	
   <ItemGroup>
-    <PackageReference Include="Moryx.AbstractionLayer" />
+	<PackageReference Include="Moryx.AbstractionLayer" />
+    <PackageReference Include="Moryx.ControlSystem" />
   </ItemGroup>
 
 </Project>
