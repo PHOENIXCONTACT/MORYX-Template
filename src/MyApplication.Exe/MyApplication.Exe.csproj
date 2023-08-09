@@ -28,7 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MyApplication.ControlSystem\MyApplication.ControlSystem.csproj" />
-    <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj" />
+    <ProjectReference Include="..\MyApplication.MyModule\MyApplication.MyModule.csproj" />
     <ProjectReference Include="..\MyApplication.Orders\MyApplication.Orders.csproj" />
     <ProjectReference Include="..\MyApplication.Products\MyApplication.Products.csproj" />
     <ProjectReference Include="..\MyApplication.Resources\MyApplication.Resources.csproj" />

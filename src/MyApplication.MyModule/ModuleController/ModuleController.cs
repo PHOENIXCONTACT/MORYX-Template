@@ -4,12 +4,12 @@ using Moryx.Configuration;
 using Moryx.Container;
 using Moryx.Runtime.Container;
 using Moryx.Runtime.Modules;
-using MyApplication.Module.Components;
-using MyApplication.Module.Facade;
+using MyApplication.MyModule.Components;
+using MyApplication.MyModule.Facade;
 
-namespace MyApplication.Module.ModuleController
+namespace MyApplication.MyModule.ModuleController
 {
-    [Description("Description of your module")]
+    [Description("Description of MyModule")]
     //public class ModuleController : ServerModuleBase<ModuleConfig> // No facade export
     public class ModuleController : ServerModuleFacadeControllerBase<ModuleConfig>, IFacadeContainer<IMyFacade> // Facade export
     {

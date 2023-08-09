@@ -5,7 +5,7 @@ using Moryx.Configuration;
 using Moryx.Runtime.Configuration;
 using Moryx.Serialization;
 
-namespace MyApplication.Module.ModuleController
+namespace MyApplication.MyModule.ModuleController
 {
     [DataContract]
     public class ModuleConfig : ConfigBase
