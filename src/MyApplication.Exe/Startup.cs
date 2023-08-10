@@ -94,8 +94,6 @@ namespace StartProject.Asp
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseMoryxLocalization();
-
             app.UseEndpoints(endpoints =>
             {
                 var conventionBuilder = endpoints.MapControllers();

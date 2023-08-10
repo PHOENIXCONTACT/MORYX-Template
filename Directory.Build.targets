@@ -7,7 +7,12 @@
     <MoryxFactoryVersion>6.1.1</MoryxFactoryVersion>
     <MoryxFrameworkWebVersion>6.1.0</MoryxFrameworkWebVersion>
     <MoryxControlSystemVersion>6.4.0</MoryxControlSystemVersion>
-    <MoryxSimulationVersion>6.1.0</MoryxSimulationVersion>
+    <MoryxSimulationVersion>6.1.2</MoryxSimulationVersion>
+    <MoryxWorkplanVersion>6.2.0</MoryxWorkplanVersion>
+    <MoryxProcessDataVersion>6.0.1</MoryxProcessDataVersion>
+    <MoryxMediaVersion>6.1.0</MoryxMediaVersion>
+    <MoryxAnalyticsVersion>6.1.0</MoryxAnalyticsVersion>
+    <MoryxFactoryMonitorVersion>6.1.0</MoryxFactoryMonitorVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
@@ -53,6 +58,56 @@
     <PackageReference Update="Moryx.Simulation" Version="$(MoryxSimulationVersion)" />
     <PackageReference Update="Moryx.Drivers.Simulation" Version="$(MoryxSimulationVersion)" />
     <PackageReference Update="Moryx.Simulation.Simulator" Version="$(MoryxSimulationVersion)" />
+
+    <!--ControlSystem dependencies-->
+    <PackageReference Update="Moryx.ControlSystem.Phoenix" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Orders.Management" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.ProcessEngine" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.Processes.Endpoints" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.ProcessEngine.Web" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.Jobs.Endpoints" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.SetupProvider" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.TransportController" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Notifications.Publisher" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Resources.WpcHandling" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Resources.Commissioning" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Resources.AssemblyInstruction" Version="$(MoryxControlSystemVersion)" />  
+    <PackageReference Update="Moryx.Users.Management" Version="$(MoryxControlSystemVersion)" />  
+    <PackageReference Update="Moryx.ControlSystem.VisualInstructions.Endpoints" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.WorkerSupport" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.WorkerSupport.Web" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Notifications.Endpoints" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Notifications.Web" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Orders.Endpoints" Version="$(MoryxControlSystemVersion)" />
+    <PackageReference Update="Moryx.Orders.Web" Version="$(MoryxControlSystemVersion)" />
+	  
+    <!-- WorkflowEditor dependencies -->
+    <PackageReference Update="Moryx.Workplans.Editing" Version="$(MoryxWorkplanVersion)" />
+    <PackageReference Update="Moryx.Workplans" Version="$(MoryxWorkplanVersion)" />
+    <PackageReference Update="Moryx.Workplans.Web" Version="$(MoryxWorkplanVersion)" />
+	  
+    <!-- Process Data -->
+    <PackageReference Update="Moryx.ProcessData.Monitor" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.InfluxDbListener" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.SpreadsheetListener" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.Adapter.ProcessEngine" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.Adapter.ResourceManagement" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.Adapter.NotificationPublisher" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.Endpoints" Version="$(MoryxProcessDataVersion)" />
+    <PackageReference Update="Moryx.ProcessData.Web" Version="$(MoryxProcessDataVersion)" />
+  
+    <!-- Media -->
+    <PackageReference Update="Moryx.Media" Version="$(MoryxMediaVersion)" />
+    <PackageReference Update="Moryx.Media.Server" Version="$(MoryxMediaVersion)" />
+    <PackageReference Update="Moryx.Media.Endpoints" Version="$(MoryxMediaVersion)" />
+    <PackageReference Update="Moryx.Media.Web" Version="$(MoryxMediaVersion)" />
+  
+    <!-- Analytics -->
+    <PackageReference Update="Moryx.Analytics.Server" Version="$(MoryxAnalyticsVersion)" />
+    <PackageReference Update="Moryx.Analytics.Web" Version="$(MoryxAnalyticsVersion)" />
+
+    <!-- Factory Montiro -->
+    <PackageReference Update="Moryx.FactoryMonitor.Web" Version="$(MoryxFactoryMonitorVersion)" />
 
   </ItemGroup>
 

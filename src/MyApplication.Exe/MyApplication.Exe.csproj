@@ -23,6 +23,47 @@
     
     <PackageReference Include="Moryx.Launcher" />
 
+    <!-- MORYX Media -->
+    <PackageReference Include="Moryx.Media" />
+    <PackageReference Include="Moryx.Media.Server" />
+    <PackageReference Include="Moryx.Media.Endpoints" />
+    <PackageReference Include="Moryx.Media.Web" />
+
+	  <!-- MORYX CS -->
+    <PackageReference Include="Moryx.Orders.Management" />
+    <PackageReference Include="Moryx.ControlSystem.Jobs.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.ProcessEngine" />
+    <PackageReference Include="Moryx.ControlSystem.ProcessEngine.Web" />
+    <PackageReference Include="Moryx.ControlSystem.Processes.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.SetupProvider" />
+    <PackageReference Include="Moryx.Notifications.Publisher" />
+    <PackageReference Include="Moryx.ControlSystem.VisualInstructions.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.WorkerSupport" />
+    <PackageReference Include="Moryx.ControlSystem.WorkerSupport.Web" />
+    <PackageReference Include="Moryx.Notifications.Endpoints" />
+    <PackageReference Include="Moryx.Notifications.Web" />
+    <PackageReference Include="Moryx.Orders.Endpoints" />
+    <PackageReference Include="Moryx.Orders.Web" />
+  
+    <!-- MORYX Worplans -->
+    <PackageReference Include="Moryx.Workplans.Editing" />
+    <PackageReference Include="Moryx.Workplans" />
+    <PackageReference Include="Moryx.Workplans.Web" />
+    
+    <!-- MORYX Factory Monitor -->
+    <PackageReference Include="Moryx.Simulation" />
+    <PackageReference Include="Moryx.Simulation.Simulator" />
+    <PackageReference Include="Moryx.FactoryMonitor.Web" />
+  
+    <!-- MORYX Process Data Monitor -->
+    <PackageReference Include="Moryx.ProcessData.Monitor" />
+    <PackageReference Include="Moryx.ProcessData.InfluxDbListener" />
+    <PackageReference Include="Moryx.ProcessData.Adapter.ProcessEngine" />
+    <PackageReference Include="Moryx.ProcessData.Adapter.ResourceManagement" />
+    <PackageReference Include="Moryx.ProcessData.Adapter.NotificationPublisher" />
+    <PackageReference Include="Moryx.ProcessData.Endpoints" />
+    <!--<PackageReference Include="Moryx.Analytics.Web" />-->
+
     <PackageReference Include="Wibu.CodeMeter" Version="7.21.0" />
   </ItemGroup>
 
