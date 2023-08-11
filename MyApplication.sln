@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication.Exe", "src\MyApplication.Exe\MyApplication.Exe.csproj", "{8F6449AB-4560-40B1-835E-308F1534734C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyApplication.App", "src\MyApplication.App\MyApplication.App.csproj", "{8F6449AB-4560-40B1-835E-308F1534734C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{1A406070-54A2-4468-92D1-5F7DB32F4560}"
 	ProjectSection(SolutionItems) = preProject
