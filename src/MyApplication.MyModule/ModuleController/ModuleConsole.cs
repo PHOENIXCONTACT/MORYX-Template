@@ -3,7 +3,7 @@ using System.ComponentModel;
 using Moryx.Runtime.Modules;
 using Moryx.Serialization;
 
-namespace MyApplication.Module.ModuleController
+namespace MyApplication.MyModule.ModuleController
 {
     [ServerModuleConsole]
     public class ModuleConsole : IServerModuleConsole

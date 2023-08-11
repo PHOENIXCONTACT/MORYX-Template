@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MyApplication.Module.Facade;
+using Moryx.AbstractionLayer.Resources;
 
 namespace StartProject.Controllers
 {
     [ApiController, Route("test/")]
     public class MyFacadeController : ControllerBase
     {
-        private readonly IMyFacade _facade;
+        private readonly IResourceManagement _facade;
 
-        public MyFacadeController(IMyFacade facade)
+        public MyFacadeController(IResourceManagement facade)
         {
             _facade = facade;
         }

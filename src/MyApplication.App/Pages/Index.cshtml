@@ -1,11 +1,11 @@
 ﻿@page
-@using MyApplication.Module.Facade
-@inject IMyFacade facade;
+@using Moryx.Runtime.Modules;
+@inject IModuleManager moduleManager
 @model IndexModel
 
 
 <div class="text-center">
     <p>Redirect to <a href="/CommandCenter">MORYX CommandCenter</a>.</p>
     <p>Redirect to <a href="/swagger">Swagger UI</a> </p>
-    <p>Facade value is @(facade.Value)</p>
+    <p>Total number of modules is @(moduleManager.AllModules.Count())</p>
 </div>

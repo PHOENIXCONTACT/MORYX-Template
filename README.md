@@ -19,7 +19,7 @@ The empty project *MyApplication* is your projects root namespace. It may contai
 
 - *MyApplication*: Activities, Capabilities, ProductTypes...
 - *MyApplication.Resources*: Contains Resources for your project
-- *MyApplication.Module*: Your new Module
+- *MyApplication.MyModule*: Your new Module (available only after adding it manually)
 - *MyApplication.Tests*: Unit Tests
 - *MyApplicaten.Exe*: Starts the application, contains references to all projects exept for tests
 
