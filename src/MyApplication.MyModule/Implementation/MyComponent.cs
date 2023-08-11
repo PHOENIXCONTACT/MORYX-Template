@@ -1,7 +1,7 @@
 ﻿using Moryx.Container;
-using MyApplication.Module.Components;
+using MyApplication.MyModule.Components;
 
-namespace MyApplication.Module.Implementation
+namespace MyApplication.MyModule.Implementation
 {
     [Component(LifeCycle.Singleton, typeof(IMyComponent))]
     public class Component : IMyComponent
