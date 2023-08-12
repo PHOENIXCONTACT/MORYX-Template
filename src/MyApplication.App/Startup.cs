@@ -9,7 +9,7 @@ using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 using System.Globalization;
 
-namespace StartProject.Asp
+namespace MyApplication.App
 {
     // ASP.NET Core apps use a Startup class, which is named Startup by convention. The Startup class includes
     // a Configure() method to create the app's request processing pipeline.  It can also include an optional

@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Moryx.AbstractionLayer.Resources;
 
-namespace StartProject.Controllers
+namespace MyApplication.App
 {
     [ApiController, Route("test/")]
     public class MyFacadeController : ControllerBase
