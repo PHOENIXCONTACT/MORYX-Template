@@ -1,8 +1,8 @@
 ﻿using System;
 using Moryx.Runtime.Modules;
-using MyApplication.Module.Components;
+using MyApplication.MyModule.Components;
 
-namespace MyApplication.Module.Facade
+namespace MyApplication.MyModule.Facade
 {
     public class MyFacade : IFacadeControl, IMyFacade
     {

@@ -27,9 +27,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MyApplication.Module\MyApplication.Module.csproj" />
-    <ProjectReference Include="..\MyApplication.Resources\MyApplication.Resources.csproj" />
     <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+    <ProjectReference Include="..\MyApplication.Resources\MyApplication.Resources.csproj" />
   </ItemGroup>
 
     <ItemGroup>

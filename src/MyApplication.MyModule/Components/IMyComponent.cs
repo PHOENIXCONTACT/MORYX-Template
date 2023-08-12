@@ -1,6 +1,6 @@
 ﻿using Moryx.Modules;
 
-namespace MyApplication.Module.Components
+namespace MyApplication.MyModule.Components
 {
     public interface IMyComponent : IPlugin
     {
