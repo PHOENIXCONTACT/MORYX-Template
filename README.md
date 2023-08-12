@@ -17,9 +17,10 @@ The empty project *MyApplication* is your projects root namespace. It may contai
 
 ## Overview of the different projects
 
-- *MyApplication*: Additional classes for your application like for example ProductTypes
+- *MyApplication*: Activities, Capabilities, ProductTypes...
 - *MyApplication.Resources*: Contains Resources for your project
 - *MyApplication.MyModule*: Your new Module (available only after adding it manually)
+- *MyApplication.Tests*: Unit Tests
 - *MyApplicaten.Exe*: Starts the application, contains references to all projects exept for tests
 
 ## Get all your licenses running
@@ -38,27 +39,6 @@ You can either use this repository as a template directly on GitLab or clone it 
 
 ### Run the application
 Open the solutions and run the application. Per default this will require access to port 5000, alternative you can configure a different port in the *launchSettings.json* within the *Properties* of the *StartProject*. While the server is running you can open the *CommandCenter* at https://localhost:5000/CommandCenter#/. [Modules](https://localhost:5000/CommandCenter#/modules) is used to interact and configure modules, while [Databases](https://localhost:5000/CommandCenter#/databases) lets you configure, create and delete databases for installed data models. Some modules like the *ResourceManager* require a database in order to start. You can choose between *PostgreSQL* und *SQlite*. 
-
-### Extend your Solution
-You can extend your solution by adding more packages to your *StartProject* or creating a MORYX package of your own. For details on different MORYX package types and documentation refer to the [MORYX-Framework](https://github.com/PHOENIXCONTACT/MORYX-Framework) and [MORYX-Factory](https://github.com/PHOENIXCONTACT/MORYX-Factory).
-
-The projects, that you create yourself, need to be loaded in MORYX. Add a reference to your project in the *StartProject*. This will make sure, that your project is build every time you start debugging. It also ensures, that all your projects dependencies are present in the *StartProjects* execution directory and that the binary is removed on clean-up
-
-### Products Quick Start
-
-The *ProductManager* needs a database for its *Moryx.Products.Model*. First make sure you have [PostgreSQL installed](https://www.postgresql.org/download/), then start the application and open [Database configuration](http://localhost/maintenanceweb/#/databases). Configure the *Moryx.Products.Model* and create the database. For details on product type definition and storage configuration, refer to the [documentation](https://github.com/PHOENIXCONTACT/MORYX-AbstractionLayer/blob/dev/docs/articles/Products/ProductDefinition.md).
-
-Once you defined your product types and instances, configure the *ProductStorage*, either manually or by using the `AutoConfigurator` accessible through the *ProductManager* [console](http://localhost/maintenanceweb/#/modules/ProductManager/console). Once the module is running, start the front-end and you can create and configure products.
-
-To access products outside the *ProductManager*, import the `IProductManagement` facade in your module and register it in the container.
-
-### Resources Quick Start
-
-The *ResourceManager* will fail upon start as it requires a database. First make sure you have [PostgreSQL installed](https://www.postgresql.org/download/), then start the application and open [Database configuration](http://localhost/maintenanceweb/#/databases). Configure the *Moryx.Resources.Model* and create the database. Afterwards [restart the failed module](http://localhost/maintenanceweb/#/modules/ResourceManager), which should now be running with a notification because of the empty database.
-
-Once the module is running, start the front-end and you can create and configure resources. You can also add additional resource types by installing their packages in the *StartProject*.
-
-To access resources outside the *ResourceManager*, import the `IResourceManagement` facade in your module and register it in the container.
 
 ### Module Quick Start
 
