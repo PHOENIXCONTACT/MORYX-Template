@@ -6,7 +6,7 @@ using Moryx.Runtime.Kernel;
 using Moryx.Tools;
 using System.IO;
 
-namespace StartProject.Asp
+namespace MyApplication.App
 {
     public class Program
     {
