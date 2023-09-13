@@ -6,19 +6,8 @@
     }
   ],
   "TypeStrategies": [
-    {
-      "$type": "Moryx.Products.Management.GenericTypeConfiguration, Moryx.Products.Management",
-      "PluginName": "GenericTypeStrategy",
-      "JsonColumn": "Text8",
-      "PropertyConfigs": [],
-      "TargetType": "MyApplication.Products.MyProductType"
-    }
   ],
   "InstanceStrategies": [
-    {
-      "TargetType": "MyApplication.Products.MyProductInstance",
-      "PluginName": "SkipInstancesStrategy"
-    }
   ],
   "LinkStrategies": [],
   "RecipeStrategies": [
