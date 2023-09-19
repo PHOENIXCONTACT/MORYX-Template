@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 namespace MyApplication.Tests
 {
     [TestFixture]
-    public class SomeResourceTest
+    public class SomeCellTest
     {
         [Test]
         public void ResourceKeepsValue()
         {
             // Arrange
-            var someResource = new SomeResource();
-            someResource.Value = 42;
+            var someCell = new SomeCell();
+            someCell.Value = 42;
 
             // Act
-            someResource.Value = 1337;
+            someCell.Value = 1337;
 
             // Assert
-            Assert.AreEqual(1337, someResource.Value);
+            Assert.AreEqual(1337, someCell.Value);
         }
     }
 }
