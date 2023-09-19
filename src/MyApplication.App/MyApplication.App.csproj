@@ -76,7 +76,9 @@
   </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Config\" />
+        <None Update="Config\*.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 
   <ItemGroup>
