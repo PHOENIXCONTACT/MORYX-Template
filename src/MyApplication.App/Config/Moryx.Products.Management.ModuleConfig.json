@@ -16,7 +16,7 @@
       "PluginName": "GenericRecipeStrategy",
       "JsonColumn": "Text8",
       "PropertyConfigs": [],
-      "TargetType": "Moryx.AbstractionLayer.Recipes.ProductRecipe"
+      "TargetType": "Moryx.AbstractionLayer.Recipes.ProductionRecipe"
     }
   ],
   "ConfigState": "Generated"
