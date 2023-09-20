@@ -44,6 +44,7 @@
     <PackageReference Include="Moryx.Notifications.Web" />
     <PackageReference Include="Moryx.Orders.Endpoints" />
     <PackageReference Include="Moryx.Orders.Web" />
+    <PackageReference Include="Moryx.Resources.AssemblyInstruction"/>
   
     <!-- MORYX Worplans -->
     <PackageReference Include="Moryx.Workplans.Editing" />
