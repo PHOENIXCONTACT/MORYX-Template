@@ -3,16 +3,16 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxFrameworkVersion>6.1.3</MoryxFrameworkVersion>
-    <MoryxFactoryVersion>6.1.1</MoryxFactoryVersion>
-    <MoryxFrameworkWebVersion>6.1.0</MoryxFrameworkWebVersion>
-    <MoryxControlSystemVersion>6.4.0</MoryxControlSystemVersion>
-    <MoryxSimulationVersion>6.1.2</MoryxSimulationVersion>
-    <MoryxWorkplanVersion>6.2.0</MoryxWorkplanVersion>
-    <MoryxProcessDataVersion>6.0.1</MoryxProcessDataVersion>
-    <MoryxMediaVersion>6.1.0</MoryxMediaVersion>
-    <MoryxAnalyticsVersion>6.1.0</MoryxAnalyticsVersion>
-    <MoryxFactoryMonitorVersion>6.1.0</MoryxFactoryMonitorVersion>
+    <MoryxFrameworkVersion>6.*</MoryxFrameworkVersion>
+    <MoryxFactoryVersion>6.*</MoryxFactoryVersion>
+    <MoryxFrameworkWebVersion>6.*</MoryxFrameworkWebVersion>
+    <MoryxControlSystemVersion>6.*</MoryxControlSystemVersion>
+    <MoryxSimulationVersion>6.*</MoryxSimulationVersion>
+    <MoryxWorkplanVersion>6.*</MoryxWorkplanVersion>
+    <MoryxProcessDataVersion>6.*</MoryxProcessDataVersion>
+    <MoryxMediaVersion>6.*</MoryxMediaVersion>
+    <MoryxAnalyticsVersion>6.*</MoryxAnalyticsVersion>
+    <MoryxFactoryMonitorVersion>6.*</MoryxFactoryMonitorVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
