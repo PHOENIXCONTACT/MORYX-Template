@@ -2,7 +2,7 @@
 
 namespace MyApplication.Resources
 {
-    public interface ISomeResource : IPublicResource
+    public interface ISomeResource : IResource
     {
     }
 }

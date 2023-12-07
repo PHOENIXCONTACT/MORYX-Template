@@ -7,7 +7,7 @@ using MyApplication.Capabilities;
 namespace MyApplication.Resources
 {
     [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
-    public class SomeResource : PublicResource, ISomeResource
+    public class SomeResource : Resource, ISomeResource
     {
         [DataMember, EntrySerialize]
         [Description("Configured value for the capabilities")]

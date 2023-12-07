@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Moryx.Asp.Integration;
 using Moryx.Model;
 using Moryx.Runtime.Kernel;
+using Moryx.Runtime.Modules;
 using Moryx.Tools;
 using MyApplication.App;
 using System.Globalization;
@@ -99,8 +100,10 @@ app.UseEndpoints(endpoints =>
 #endregion
 
 app.Services.UseMoryxConfigurations("Config");
-app.Services.StartMoryxModules();
+
+var moduleManager = app.Services.GetRequiredService<IModuleManager>();
+moduleManager.StartModules();
 
 app.Run();
 
-app.Services.StopMoryxModules();
+moduleManager.StopModules();
