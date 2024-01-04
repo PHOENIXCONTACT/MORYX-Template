@@ -3,10 +3,10 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxFrameworkVersion>6.1.3</MoryxFrameworkVersion>
-    <MoryxFactoryVersion>6.1.1</MoryxFactoryVersion>
-    <MoryxFrameworkWebVersion>6.1.0</MoryxFrameworkWebVersion>
-    <MoryxControlSystemVersion>6.4.0</MoryxControlSystemVersion>
+    <MoryxFrameworkVersion>8.*</MoryxFrameworkVersion>
+    <MoryxFactoryVersion>8.*</MoryxFactoryVersion>
+    <MoryxFrameworkWebVersion>8.*</MoryxFrameworkWebVersion>
+    <MoryxControlSystemVersion>8.*</MoryxControlSystemVersion>    
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
