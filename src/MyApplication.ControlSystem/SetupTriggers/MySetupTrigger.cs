@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Moryx.AbstractionLayer.Recipes;
 using Moryx.Container;
 using Moryx.ControlSystem.Setups;
@@ -21,7 +22,7 @@ namespace MyApplication.ControlSystem.SetupTriggers
             return SetupEvaluation.Provide(new SomeCapabilities());
         }
 
-        public override IWorkplanStep CreateStep(IProductRecipe recipe)
+        public override IReadOnlyList<IWorkplanStep> CreateSteps(IProductRecipe recipe)
         {
             throw new NotImplementedException();
         }
