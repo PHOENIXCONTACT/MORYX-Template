@@ -4,12 +4,8 @@ using System.Threading.Tasks;
 
 namespace MyApplication.App;
 
-public class ExamplePolicyProvider : DefaultAuthorizationPolicyProvider
+public class ExamplePolicyProvider(IOptions<AuthorizationOptions> options) : DefaultAuthorizationPolicyProvider(options)
 {
-    public ExamplePolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
-    {
-    }
-
     public override async Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
     {
         var policy = await base.GetPolicyAsync(policyName);
