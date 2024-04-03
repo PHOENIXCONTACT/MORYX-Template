@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Moryx.Asp.Integration;
+using Moryx.Launcher;
 using Moryx.Model;
 using Moryx.Runtime.Kernel;
 using Moryx.Runtime.Modules;
@@ -25,6 +26,7 @@ services.AddMoryxModels();
 services.AddMoryxModules();
 
 #region Startup ConfigureServices
+services.AddSingleton<IShellNavigator, ShellNavigator>();
 services.AddSingleton<IAuthorizationPolicyProvider, ExamplePolicyProvider>();
 
 services.AddLocalization();

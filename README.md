@@ -23,6 +23,10 @@ The empty project *MyApplication* is your projects root namespace. It may contai
 - *MyApplication.Tests*: Unit Tests
 - *MyApplicaten.Exe*: Starts the application, contains references to all projects exept for tests
 
+## Get all your licenses running
+This project runs with developer licenses. The licenses end on `WibuCmRaU`. You need the `CodeMeter Control Center`, where you can add those files via drag and drop.
+In any case you should install the PHOENIX CONTACT Activation Wizard available on the [PHOENIX CONTACT page](https://www.phoenixcontact.com/de-de/produkte/programmier-software-plcnext-engineer-1046008) under Downloads -> Software.
+
 ## Getting Started
 
 You can either use this repository as a template directly on GitLab or clone it like any other GIT repository. 

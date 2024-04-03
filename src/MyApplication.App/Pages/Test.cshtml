@@ -1,0 +1,21 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization;
+@using Moryx.Asp.Integration;
+@using Moryx.Runtime.Modules;
+@using System.ComponentModel.DataAnnotations;
+@inject IModuleManager moduleManager
+
+@{
+    ViewData["Title"] = "Test";
+    ViewData["BaseRef"] = "Test";
+
+    Layout = "_Layout";
+}
+@attribute [WebModule("Test", "ballot"),  // Category = ModuleCategory.Diagnostics),
+  Display(Name = "Test", Description = "My first test module"), AllowAnonymous]
+
+<div class="text-center">
+    <p>Redirect to <a href="/CommandCenter">MORYX CommandCenter</a>.</p>
+    <p>Redirect to <a href="/swagger">Swagger UI</a> </p>
+    <p>Facade value is @(moduleManager.AllModules.Count())</p>
+</div>
