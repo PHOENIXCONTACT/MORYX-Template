@@ -4,14 +4,12 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Moryx.Asp.Integration;
 using Moryx.Model;
 using Moryx.Runtime.Kernel;
 using Moryx.Runtime.Modules;
 using Moryx.Tools;
 using MyApplication.App;
 using System.Globalization;
-using System.IO;
 using System.Text.Json.Serialization;
 
 AppDomainBuilder.LoadAssemblies();
@@ -32,14 +30,14 @@ services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
     {
-                    new CultureInfo("de-De"),
-                    new CultureInfo("en-De"),
-                    new CultureInfo("it-De"),
-                    new CultureInfo("zh-Hans"),
+        new CultureInfo("de-DE"),
+        new CultureInfo("en-US"),
+        new CultureInfo("it-it"),
+        new CultureInfo("zh-Hans"),
     };
-
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
+    options.SetDefaultCulture("de-De");
 });
 
 
@@ -90,13 +88,9 @@ if (env.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    var conventionBuilder = endpoints.MapControllers();
-    conventionBuilder.WithMetadata(new AllowAnonymousAttribute());
+app.MapControllers().WithMetadata(new AllowAnonymousAttribute());
+app.MapRazorPages();
 
-    endpoints.MapRazorPages();
-});
 #endregion
 
 app.Services.UseMoryxConfigurations("Config");

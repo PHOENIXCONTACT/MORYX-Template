@@ -2,26 +2,20 @@
 using Microsoft.Extensions.Options;
 using System.Threading.Tasks;
 
-namespace MyApplication.App
+namespace MyApplication.App;
+
+public class ExamplePolicyProvider(IOptions<AuthorizationOptions> options) : DefaultAuthorizationPolicyProvider(options)
 {
-    public class ExamplePolicyProvider : DefaultAuthorizationPolicyProvider
+    public override async Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
     {
-        public ExamplePolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
-        {
-        }
+        var policy = await base.GetPolicyAsync(policyName);
 
-        public override async Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
+        if (policy == null)
         {
-            var policy = await base.GetPolicyAsync(policyName);
-
-            if (policy == null)
-            {
-                policy = new AuthorizationPolicyBuilder()
-                    .RequireClaim("Permission", policyName)
-                    .Build();
-            }
-            return policy;
+            policy = new AuthorizationPolicyBuilder()
+                .RequireClaim("Permission", policyName)
+                .Build();
         }
+        return policy;
     }
-
 }
