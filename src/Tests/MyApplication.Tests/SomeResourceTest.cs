@@ -1,10 +1,5 @@
 ﻿using MyApplication.Resources;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApplication.Tests;
 
@@ -22,6 +17,6 @@ public class SomeResourceTest
         someResource.Value = 1337;
 
         // Assert
-        Assert.AreEqual(1337, someResource.Value);
+        Assert.That(1337, Is.EqualTo(someResource.Value));
     }
 }
