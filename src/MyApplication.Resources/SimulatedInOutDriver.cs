@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MyApplication.Resources
 {
-    internal class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
+    public class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
     {
         public override void Ready(IActivity activity)
         {
