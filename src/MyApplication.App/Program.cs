@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -30,14 +31,14 @@ services.Configure<RequestLocalizationOptions>(options =>
 {
     var supportedCultures = new[]
     {
-        new CultureInfo("de-DE"),
-        new CultureInfo("en-US"),
-        new CultureInfo("it-it"),
-        new CultureInfo("zh-Hans"),
+                    new CultureInfo("de-DE"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("it-it"),
+                    new CultureInfo("zh-Hans"),
+                    new CultureInfo("pl-PL")
     };
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
-    options.SetDefaultCulture("de-De");
 });
 
 
