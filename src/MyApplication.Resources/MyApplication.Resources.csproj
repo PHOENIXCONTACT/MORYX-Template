@@ -10,9 +10,8 @@
 		<PackageReference Include="Moryx.Drivers.Simulation" />
 	</ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\MyApplication\MyApplication.csproj" />
-	</ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\MyApplication\MyApplication.csproj" />
+  </ItemGroup>
 
 </Project>

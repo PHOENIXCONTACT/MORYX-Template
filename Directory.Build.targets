@@ -18,7 +18,6 @@
   <!-- Package versions for package references across all projects -->
   <ItemGroup>
     <!--3rd party dependencies-->
-    <PackageReference Update="Caliburn.Micro" Version="3.2.0" />
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Update="Moq" Version="4.14.6" />
     <PackageReference Update="NUnit" Version="3.13.3" />
