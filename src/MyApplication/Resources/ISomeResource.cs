@@ -1,8 +1,7 @@
 ﻿using Moryx.AbstractionLayer.Resources;
 
-namespace MyApplication.Resources
+namespace MyApplication.Resources;
+
+public interface ISomeResource : IResource
 {
-    public interface ISomeResource : IResource
-    {
-    }
 }
