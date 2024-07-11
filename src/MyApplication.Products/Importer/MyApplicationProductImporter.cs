@@ -6,27 +6,26 @@ using Moryx.Logging;
 using Moryx.Modules;
 using Moryx.Products.Management;
 
-namespace MyApplication.Products
+namespace MyApplication.Products;
+
+/// <summary>
+/// Imports products for MyApplication
+/// </summary>
+[ExpectedConfig(typeof(MyApplicationProductImporterConfig))]
+[Plugin(LifeCycle.Transient, typeof(IProductImporter), Name = nameof(MyApplicationProductImporter))]
+public  class MyApplicationProductImporter :  ProductImporterBase<MyApplicationProductImporterConfig, MyApplicationImportParameters>, ILoggingComponent
 {
-    /// <summary>
-    /// Imports products for MyApplication
-    /// </summary>
-    [ExpectedConfig(typeof(MyApplicationProductImporterConfig))]
-    [Plugin(LifeCycle.Transient, typeof(IProductImporter), Name = nameof(MyApplicationProductImporter))]
-    public  class MyApplicationProductImporter :  ProductImporterBase<MyApplicationProductImporterConfig, MyApplicationImportParameters>, ILoggingComponent
+    /// <inheritdoc />
+    public IModuleLogger Logger { get; set; }
+
+    public IProductStorage Storage { get; set; }
+
+    protected override Task<ProductImporterResult> Import(ProductImportContext context, MyApplicationImportParameters parameters)
     {
-        /// <inheritdoc />
-        public IModuleLogger Logger { get; set; }
+        var products = new List<ProductType>();
 
-        public IProductStorage Storage { get; set; }
+        // TODO: Create objects from parameters, file or endpoint
 
-        protected override Task<ProductImporterResult> Import(ProductImportContext context, MyApplicationImportParameters parameters)
-        {
-            var products = new List<ProductType>();
-
-            // TODO: Create objects from parameters, file or endpoint
-
-            return Task.FromResult(new ProductImporterResult { ImportedTypes = products });
-        }
+        return Task.FromResult(new ProductImporterResult { ImportedTypes = products });
     }
 }

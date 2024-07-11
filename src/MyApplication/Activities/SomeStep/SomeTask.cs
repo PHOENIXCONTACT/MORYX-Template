@@ -1,10 +1,9 @@
 ﻿using Moryx.AbstractionLayer;
 using System.ComponentModel.DataAnnotations;
 
-namespace MyApplication.Activities.SomeStep
+namespace MyApplication.Activities.SomeStep;
+
+[Display(Name = "Some Task", Description = "Task which does something with a product")]
+public class SomeTask : TaskStep<SomeActivity, SomeParameters>
 {
-    [Display(Name = "Some Task", Description = "Task which does something with a product")]
-    public class SomeTask : TaskStep<SomeActivity, SomeParameters>
-    {
-    }
 }

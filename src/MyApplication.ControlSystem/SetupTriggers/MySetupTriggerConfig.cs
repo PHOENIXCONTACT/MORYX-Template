@@ -1,9 +1,8 @@
 ﻿using Moryx.ControlSystem.Setups;
 
-namespace MyApplication.ControlSystem.SetupTriggers
+namespace MyApplication.ControlSystem.SetupTriggers;
+
+public class MySetupTriggerConfig : SetupTriggerConfig
 {
-    public class MySetupTriggerConfig : SetupTriggerConfig
-    {
-        public override string PluginName => nameof(MySetupTrigger);
-    }
+    public override string PluginName => nameof(MySetupTrigger);
 }
