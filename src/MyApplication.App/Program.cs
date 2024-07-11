@@ -13,7 +13,6 @@ using Moryx.Runtime.Modules;
 using Moryx.Tools;
 using MyApplication.App;
 using System.Globalization;
-using System.IO;
 using System.Text.Json.Serialization;
 
 AppDomainBuilder.LoadAssemblies();
@@ -41,7 +40,6 @@ services.Configure<RequestLocalizationOptions>(options =>
                     new CultureInfo("zh-Hans"),
                     new CultureInfo("pl-PL")
     };
-
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
@@ -94,13 +92,9 @@ if (env.IsDevelopment())
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.UseEndpoints(endpoints =>
-{
-    var conventionBuilder = endpoints.MapControllers();
-    conventionBuilder.WithMetadata(new AllowAnonymousAttribute());
+app.MapControllers().WithMetadata(new AllowAnonymousAttribute());
+app.MapRazorPages();
 
-    endpoints.MapRazorPages();
-});
 #endregion
 
 app.Services.UseMoryxConfigurations("Config");

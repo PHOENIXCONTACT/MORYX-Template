@@ -1,12 +1,11 @@
 ﻿using Moryx.AbstractionLayer.Products;
 
-namespace MyApplication.Products
+namespace MyApplication.Products;
+
+public class MyProductType : ProductType
 {
-    public class MyProductType : ProductType
+    protected override ProductInstance Instantiate()
     {
-        protected override ProductInstance Instantiate()
-        {
-            return new MyProductInstance();
-        }
+        return new MyProductInstance();
     }
 }
