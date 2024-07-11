@@ -1,28 +1,22 @@
 ﻿using MyApplication.Resources;
 using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace MyApplication.Tests
+namespace MyApplication.Tests;
+
+[TestFixture]
+public class SomeResourceTest
 {
-    [TestFixture]
-    public class SomeCellTest
+    [Test]
+    public void ResourceKeepsValue()
     {
-        [Test]
-        public void ResourceKeepsValue()
-        {
-            // Arrange
-            var someCell = new SomeCell();
-            someCell.Value = 42;
+        // Arrange
+        var someCell = new SomeCell();
+        someCell.Value = 42;
 
-            // Act
-            someCell.Value = 1337;
+        // Act
+        someCell.Value = 1337;
 
-            // Assert
-            Assert.AreEqual(1337, someCell.Value);
-        }
+        // Assert
+        Assert.That(1337, Is.EqualTo(someCell.Value));
     }
 }

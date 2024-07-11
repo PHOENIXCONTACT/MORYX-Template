@@ -1,10 +1,9 @@
 ﻿using Moryx.AbstractionLayer.Products;
 using System;
 
-namespace MyApplication.Products
+namespace MyApplication.Products;
+
+public class MyProductInstance : ProductInstance<MyProductType>
 {
-    public class MyProductInstance : ProductInstance<MyProductType>
-    {
-        public DateTime ManufacturingDate { get; set; }
-    }
+    public DateTime ManufacturingDate { get; set; }
 }
