@@ -80,13 +80,22 @@
     </None>
   </ItemGroup>
 
-
-  <ItemGroup>
-    <Compile Remove="$(NugetPackageRoot)\**\*.WibuCmRaU" />
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <Compile Remove="$(UserProfile)\**\*.WibuCmRaU" />
   </ItemGroup>
  
-	<ItemGroup>
-		<None Include="$(NugetPackageRoot)\**\*.WibuCmRaU">
+	<ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+		<None Include="$(UserProfile)\**\*.WibuCmRaU">
+			<Link>%(Filename)%(Extension)</Link>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(OS)' == 'Unix'">
+		<Compile Remove="/root/.nuget/packages/**/*.WibuCmRaU" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(OS)' == 'Unix'">
+		<None Include="/root/.nuget/packages/**/*.WibuCmRaU">
 			<Link>%(Filename)%(Extension)</Link>
 		</None>
 	</ItemGroup>
