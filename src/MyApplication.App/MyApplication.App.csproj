@@ -5,62 +5,80 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Swagger -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 
-    <PackageReference Include="Moryx.Runtime.Endpoints" />
+    <!-- MORYX Framework -->
     <PackageReference Include="Moryx.Runtime.Kernel" />
-	<PackageReference Include="Moryx.CommandCenter.Web" />
     <PackageReference Include="Moryx.Asp.Extensions" />
 
+    <!-- MORYX Command Center -->
+    <PackageReference Include="Moryx.Runtime.Endpoints" />
+    <PackageReference Include="Moryx.CommandCenter.Web" />
+
+    <!-- MORYX Resources -->
     <PackageReference Include="Moryx.Resources.Management" />
     <PackageReference Include="Moryx.AbstractionLayer.Resources.Endpoints" />
     <PackageReference Include="Moryx.Resources.Web" />
-    <PackageReference Include="Moryx.Products.Management" />
-    <PackageReference Include="Moryx.Products.Web" />
-    <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
-    
-    <PackageReference Include="Moryx.Launcher" />
 
+    <!-- MORYX Products -->
+    <PackageReference Include="Moryx.Products.Management" />
+    <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
+    <PackageReference Include="Moryx.Products.Web" />
+
+    <!-- MORYX Worplans -->
+    <PackageReference Include="Moryx.Workplans.Editing" />
+    <PackageReference Include="Moryx.Workplans" />
+    <PackageReference Include="Moryx.Workplans.Web" />
+	  
     <!-- MORYX Media -->
     <PackageReference Include="Moryx.Media" />
     <PackageReference Include="Moryx.Media.Server" />
     <PackageReference Include="Moryx.Media.Endpoints" />
     <PackageReference Include="Moryx.Media.Web" />
 
-	  <!-- MORYX CS -->
+    <!-- MORYX Orders -->
     <PackageReference Include="Moryx.Orders.Management" />
-    <PackageReference Include="Moryx.ControlSystem.Jobs.Endpoints" />
-    <PackageReference Include="Moryx.ControlSystem.ProcessEngine" />
-    <PackageReference Include="Moryx.ControlSystem.ProcessEngine.Web" />
-    <PackageReference Include="Moryx.ControlSystem.Processes.Endpoints" />
-    <PackageReference Include="Moryx.ControlSystem.SetupProvider" />
-    <PackageReference Include="Moryx.Notifications.Publisher" />
-    <PackageReference Include="Moryx.ControlSystem.VisualInstructions.Endpoints" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport.Web" />
-    <PackageReference Include="Moryx.Notifications.Endpoints" />
-    <PackageReference Include="Moryx.Notifications.Web" />
     <PackageReference Include="Moryx.Orders.Endpoints" />
     <PackageReference Include="Moryx.Orders.Web" />
-    <PackageReference Include="Moryx.Resources.AssemblyInstruction"/>
-  
-    <!-- MORYX Worplans -->
-    <PackageReference Include="Moryx.Workplans.Editing" />
-    <PackageReference Include="Moryx.Workplans" />
-    <PackageReference Include="Moryx.Workplans.Web" />
-    
-    <!-- MORYX Factory Monitor -->
+
+    <!-- MORYX Process Engine -->
+    <PackageReference Include="Moryx.ControlSystem.ProcessEngine" />
+    <PackageReference Include="Moryx.ControlSystem.Jobs.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.Processes.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.ProcessEngine.Web" />
+
+    <!-- MORYX Setups -->
+    <PackageReference Include="Moryx.ControlSystem.SetupProvider" />
+
+    <!-- MORYX Notifications -->
+    <PackageReference Include="Moryx.Notifications.Publisher" />
+    <PackageReference Include="Moryx.Notifications.Endpoints" />
+    <PackageReference Include="Moryx.Notifications.Web" />
+
+    <!-- MORYX Worker Support -->
+    <PackageReference Include="Moryx.Resources.AssemblyInstruction" />
+    <PackageReference Include="Moryx.ControlSystem.WorkerSupport" />
+    <PackageReference Include="Moryx.ControlSystem.VisualInstructions.Endpoints" />
+    <PackageReference Include="Moryx.ControlSystem.WorkerSupport.Web" />
+
+    <!-- MORYX Launcher -->
+    <PackageReference Include="Moryx.Launcher" />
+
+    <!-- MORYX Simulation -->
     <PackageReference Include="Moryx.Simulation" />
     <PackageReference Include="Moryx.Simulation.Simulator" />
+
+    <!-- MORYX Factory Monitor -->
     <PackageReference Include="Moryx.FactoryMonitor.Web" />
-  
-    <!-- MORYX Process Data Monitor -->
+
+    <!-- MORYX Process Data -->
     <PackageReference Include="Moryx.ProcessData.Monitor" />
     <PackageReference Include="Moryx.ProcessData.InfluxDbListener" />
     <PackageReference Include="Moryx.ProcessData.Adapter.ProcessEngine" />
     <PackageReference Include="Moryx.ProcessData.Adapter.ResourceManagement" />
     <PackageReference Include="Moryx.ProcessData.Adapter.NotificationPublisher" />
-    <PackageReference Include="Moryx.ProcessData.Endpoints" />
+    <PackageReference Include="Moryx.ProcessData.Endpoints" />    
     <!--<PackageReference Include="Moryx.Analytics.Web" />-->
 
     <PackageReference Include="Wibu.CodeMeter" Version="7.21.0" />
@@ -81,11 +99,11 @@
   </ItemGroup>
 
   <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
-    <Compile Remove="$(UserProfile)\**\*.WibuCmRaU" />
+    <Compile Remove="$(UserProfile)\.nuget\packages\**\*.WibuCmRaU" />
   </ItemGroup>
  
 	<ItemGroup Condition="'$(OS)' == 'Windows_NT'">
-		<None Include="$(UserProfile)\**\*.WibuCmRaU">
+		<None Include="$(UserProfile)\.nuget\packages\**\*.WibuCmRaU">
 			<Link>%(Filename)%(Extension)</Link>
 		</None>
 	</ItemGroup>
