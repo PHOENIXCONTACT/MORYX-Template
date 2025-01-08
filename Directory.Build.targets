@@ -33,16 +33,14 @@
     <!-- MORYX Resources -->
     <PackageReference Update="Moryx.Resources.Management" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.Resources.Endpoints" Version="$(MoryxVersion)" />
-
+    <PackageReference Update="Moryx.Resources.Web" Version="$(MoryxVersion)" />
+	  
     <!-- MORYX Products -->
     <PackageReference Update="Moryx.Products.Management" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.Products.Endpoints" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Products.Web" Version="$(MoryxVersion)" />  
 
-    <!-- Framework Web dependencies -->
-    <PackageReference Update="Moryx.Resources.Web" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Products.Web" Version="$(MoryxVersion)" />
-
-    <!-- ControlSystem dependencies -->
+    <!-- MORYX Launcher -->
     <PackageReference Update="Moryx.Launcher" Version="$(MoryxVersion)" />
 
   </ItemGroup>
