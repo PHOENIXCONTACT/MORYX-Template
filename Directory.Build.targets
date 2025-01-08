@@ -37,6 +37,14 @@
     <!-- MORYX Products -->
     <PackageReference Update="Moryx.Products.Management" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.Products.Endpoints" Version="$(MoryxVersion)" />
+
+    <!-- Framework Web dependencies -->
+    <PackageReference Update="Moryx.Resources.Web" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Products.Web" Version="$(MoryxVersion)" />
+
+    <!-- ControlSystem dependencies -->
+    <PackageReference Update="Moryx.Launcher" Version="$(MoryxVersion)" />
+
   </ItemGroup>
 
 </Project>

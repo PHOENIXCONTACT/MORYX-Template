@@ -5,24 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!-- Swagger -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 
-    <!-- MORYX Framework -->
+    <PackageReference Include="Moryx.Runtime.Endpoints" />
     <PackageReference Include="Moryx.Runtime.Kernel" />
+	<PackageReference Include="Moryx.CommandCenter.Web" />
     <PackageReference Include="Moryx.Asp.Extensions" />
 
-    <!-- MORYX Command Center -->
-    <PackageReference Include="Moryx.Runtime.Endpoints" />
-    <PackageReference Include="Moryx.CommandCenter.Web" />
-
-    <!-- MORYX Resources -->
     <PackageReference Include="Moryx.Resources.Management" />
     <PackageReference Include="Moryx.AbstractionLayer.Resources.Endpoints" />
-
-    <!-- MORYX Products -->
+    <PackageReference Include="Moryx.Resources.Web" />
     <PackageReference Include="Moryx.Products.Management" />
+    <PackageReference Include="Moryx.Products.Web" />
     <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
+    
+    <PackageReference Include="Moryx.Launcher" />
+
+    <PackageReference Include="Wibu.CodeMeter" Version="7.21.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,5 +34,25 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+    <Compile Remove="$(UserProfile)\**\*.WibuCmRaU" />
+  </ItemGroup>
+ 
+	<ItemGroup Condition="'$(OS)' == 'Windows_NT'">
+		<None Include="$(UserProfile)\**\*.WibuCmRaU">
+			<Link>%(Filename)%(Extension)</Link>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(OS)' == 'Unix'">
+		<Compile Remove="/root/.nuget/packages/**/*.WibuCmRaU" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(OS)' == 'Unix'">
+		<None Include="/root/.nuget/packages/**/*.WibuCmRaU">
+			<Link>%(Filename)%(Extension)</Link>
+		</None>
+	</ItemGroup>
 
 </Project>
