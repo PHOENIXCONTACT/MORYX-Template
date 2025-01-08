@@ -10,7 +10,7 @@
 
     <CurrentYear>$([System.DateTime]::Now.ToString("yyyy"))</CurrentYear>
     <Copyright>Copyright © $(Company) $(CurrentYear)</Copyright>
-	<RestoreUseLegacyDependencyResolver>true</RestoreUseLegacyDependencyResolver>
+    <RestoreUseLegacyDependencyResolver>true</RestoreUseLegacyDependencyResolver>
   </PropertyGroup>
 
 </Project>

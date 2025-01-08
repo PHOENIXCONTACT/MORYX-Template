@@ -5,23 +5,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<!-- Swagger -->
+    <!-- Swagger -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 
-	<!-- MORYX Framework -->
+    <!-- MORYX Framework -->
     <PackageReference Include="Moryx.Runtime.Kernel" />
     <PackageReference Include="Moryx.Asp.Extensions" />
 
-	<!-- MORYX Command Center -->
-	<PackageReference Include="Moryx.Runtime.Endpoints" />
-	<PackageReference Include="Moryx.CommandCenter.Web" />
+    <!-- MORYX Command Center -->
+    <PackageReference Include="Moryx.Runtime.Endpoints" />
+    <PackageReference Include="Moryx.CommandCenter.Web" />
 
-	<!-- MORYX Resources -->
+    <!-- MORYX Resources -->
     <PackageReference Include="Moryx.Resources.Management" />
     <PackageReference Include="Moryx.AbstractionLayer.Resources.Endpoints" />
 
-	<!-- MORYX Products -->
-	<PackageReference Include="Moryx.Products.Management" />
+    <!-- MORYX Products -->
+    <PackageReference Include="Moryx.Products.Management" />
     <PackageReference Include="Moryx.AbstractionLayer.Products.Endpoints" />
   </ItemGroup>
 
