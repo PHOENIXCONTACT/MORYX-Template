@@ -14,22 +14,28 @@
     <PackageReference Update="NUnit" Version="4.*" />
     <PackageReference Update="NUnit3TestAdapter" Version="4.*" />
 
-    <!-- Framework dependencies -->
+    <!-- MORYX Framework -->
     <PackageReference Update="Moryx" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Model.Sqlite" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Runtime" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Runtime.Endpoints" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.CommandCenter.Web" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.Notifications" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Model.Sqlite" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Runtime" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.TestTools" Version="$(MoryxVersion)" />
+	  
+    <!-- MORYX Command Center -->
+    <PackageReference Update="Moryx.Runtime.Endpoints" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.CommandCenter.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Resources -->
     <PackageReference Update="Moryx.Resources.Management" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Products.Management" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.Resources.Endpoints" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Products -->
+    <PackageReference Update="Moryx.Products.Management" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.Products.Endpoints" Version="$(MoryxVersion)" />
   </ItemGroup>
 
