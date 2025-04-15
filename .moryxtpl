@@ -1,0 +1,88 @@
+{
+  "Version": "0.0.1",
+  "Placeholders": {
+    "SolutionName": "MyApplication"
+  },
+  "New": {
+    "Replacements": {
+      "MyApplication": "{solutionname}"
+    },
+    "Files": [
+      "*",
+      "docs\\*",
+      "src\\MyApplication\\*",
+      "src\\MyApplication.App\\*",
+      "src\\MyApplication.App\\Config\\*",
+      "src\\MyApplication.App\\Properties\\*",
+      "src\\MyApplication.App\\wwwroot\\*",
+      "src\\MyApplication.ControlSystem\\*",
+      "src\\MyApplication.Orders\\*",
+      "src\\MyApplication.Products\\Importer\\*",
+      "src\\MyApplication.Products\\*",
+      "src\\MyApplication.Resources\\*.csproj",
+      "src\\Tests\\MyApplication.Tests\\*.csproj"
+    ]
+  },
+  "Add": {
+    "Product": {
+      "Replacements": {
+        "MyProduct": "{id}"
+      },
+      "Files": [
+        "**\\MyProductInstance.cs",
+        "**\\MyProductType.cs"
+      ]
+    },
+    "Resource": {
+      "Replacements": {
+        "SomeResource": "{id}Resource",
+        "MyResource": "{id}Resource"
+      },
+      "Files": [
+        "**\\*ISomeResource*",
+        "**\\*MyResource*"
+      ]
+    },
+    "Step": {
+      "Replacements": {
+        "Some": "{id}",
+        "MyApplication.Resources": "{solutionname}.Resources.{id}"
+      },
+      "Files": [
+        "**\\*Some*",
+        "**\\SimulatedInOutDriver.cs",
+        "**\\MyApplication.Resources.csproj"
+      ]
+    },
+    "Module": {
+      "Replacements": {
+        "MyModule": "{id}"
+      },
+      "Files": [
+        "**\\*MyModule**\\*"
+      ]
+    },
+    "State": {
+      "Replacements": {
+        "SpecificState": "{id}State",
+        "SomeResource": "{resource}",
+        "SomeCell": "{resource}",
+        "SomeStateBase": "{resource}StateBase"
+      },
+      "Files": [
+        "**\\*State.cs"
+      ]
+    },
+    "StateBase": {
+      "Replacements": {
+        "SomeResource": "{resource}",
+        "SomeCell": "{resource}",
+        "SomeStateBase": "{resource}StateBase",
+        "StateBase.cs": "{resource}StateBase.cs"
+      },
+      "Files": [
+        "**\\StateBase.cs"
+      ]
+    }
+  }
+}
