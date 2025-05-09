@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
@@ -12,15 +12,15 @@ using Moryx.ControlSystem.VisualInstructions;
 using Moryx.Serialization;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
+using Newtonsoft.Json.Linq;
 
 namespace MyApplication.Resources;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
 public class SomeCell : Cell
 {
-    [DataMember, EntrySerialize]
-    [Description("Configured value for the capabilities")]
-    public int Value { get; set; }
+    private Session _currentSession;
+    private long _currentInstruction;
 
     [ResourceReference(ResourceRelationType.Driver)]
     public IInOutDriver<object, object> Driver { get; set; }
@@ -28,13 +28,13 @@ public class SomeCell : Cell
     [ResourceReference(ResourceRelationType.Extension)]
     public IVisualInstructor VisualInstructor { get; set; }
 
-    private Session _currentSession;
-    private long _currentInstruction;
+    [DataMember, EntrySerialize]
+    [Description("Configured value for the capabilities")]
+    public int Value { get; set; }
 
     protected override void OnInitialize()
     {
         base.OnInitialize();
-
         Capabilities = new SomeCapabilities { Value = Value };
 
         if (Driver != null)
@@ -58,10 +58,6 @@ public class SomeCell : Cell
 
     public override IEnumerable<Session> ControlSystemAttached()
     {
-        // Publish worker support session if instructor is configured instead of driver
-        if (VisualInstructor != null && Driver == null)
-            yield return _currentSession = Session.StartSession(ActivityClassification.Production, ReadyToWorkType.Push);
-
         yield break;
     }
 
@@ -72,28 +68,11 @@ public class SomeCell : Cell
 
     public override void StartActivity(ActivityStart activityStart)
     {
-        _currentSession = activityStart;
-        switch (activityStart.Activity)
-        {
-            case SomeActivity activity:
-                /* Start execution via driver */
-                if (VisualInstructor != null)
-                {
-                    VisualInstructor.Execute(Name, activityStart, InstructionCompleted);
-                }
-                else if (Driver != null)
-                {
-                    Driver.Output["Start"] = true;
-                }
-                break;
-        }
+        /* Start execution here */
     }
 
     private void InstructionCompleted(int result, ActivityStart session)
     {
-        var completed = session.CreateResult(result);
-        _currentSession = completed;
-        PublishActivityCompleted(completed);
     }
 
     public override void ProcessAborting(IActivity affectedActivity)
@@ -113,18 +92,6 @@ public class SomeCell : Cell
 
     public override void SequenceCompleted(SequenceCompleted completed)
     {
-        _currentSession = completed;
-
-        if (Driver == null)
-        {
-            var rtw = Session.StartSession(ActivityClassification.Production, ReadyToWorkType.Push);
-            _currentSession = rtw;
-            PublishReadyToWork(rtw);
-        }
-        else
-        {
-            Driver.Output["Start"] = false;
-        }
     }
 
     private void OnInputChanged(object sender, InputChangedEventArgs args)

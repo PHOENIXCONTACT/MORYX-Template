@@ -1,4 +1,4 @@
-﻿using Moryx.AbstractionLayer;
+using Moryx.AbstractionLayer;
 using Moryx.AbstractionLayer.Capabilities;
 using MyApplication.Capabilities;
 

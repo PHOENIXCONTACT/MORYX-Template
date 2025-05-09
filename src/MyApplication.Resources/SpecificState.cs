@@ -1,4 +1,4 @@
-﻿using Moryx.StateMachines;
+using Moryx.StateMachines;
 
 namespace MyApplication.Resources.SomeCell.States
 {

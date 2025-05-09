@@ -1,4 +1,4 @@
-﻿using Moryx.AbstractionLayer;
+using Moryx.AbstractionLayer;
 using Moryx.Drivers.Simulation.InOutDriver;
 using Moryx.Simulation;
 using System;

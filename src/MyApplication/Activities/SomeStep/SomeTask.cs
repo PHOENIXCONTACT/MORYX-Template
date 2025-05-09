@@ -1,4 +1,4 @@
-﻿using Moryx.AbstractionLayer;
+using Moryx.AbstractionLayer;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyApplication.Activities.SomeStep;

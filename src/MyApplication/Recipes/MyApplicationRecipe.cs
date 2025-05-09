@@ -1,4 +1,4 @@
-﻿using Moryx.AbstractionLayer.Recipes;
+using Moryx.AbstractionLayer.Recipes;
 using Moryx.ControlSystem.Recipes;
 
 namespace MyApplication.Recipes;
