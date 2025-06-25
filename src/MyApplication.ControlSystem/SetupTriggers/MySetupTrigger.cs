@@ -19,8 +19,6 @@ public class MySetupTrigger : SetupTriggerBase<MySetupTriggerConfig>
     public override SetupEvaluation Evaluate(IProductRecipe recipe)
     {
         return true;
-        return SetupClassification.MaterialChange;
-        return SetupEvaluation.Provide(new SomeCapabilities());
     }
 
     public override IReadOnlyList<IWorkplanStep> CreateSteps(IProductRecipe recipe)
