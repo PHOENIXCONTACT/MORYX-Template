@@ -5,7 +5,6 @@ using Moryx.Container;
 using Moryx.ControlSystem.Setups;
 using Moryx.Modules;
 using Moryx.Workplans;
-using MyApplication.Capabilities;
 
 namespace MyApplication.ControlSystem.SetupTriggers;
 

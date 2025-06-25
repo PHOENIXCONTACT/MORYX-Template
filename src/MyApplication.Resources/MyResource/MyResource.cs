@@ -1,7 +1,6 @@
-using System.ComponentModel;
-using System.Runtime.Serialization;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using Moryx.AbstractionLayer.Resources;
-using Moryx.Serialization;
 
 namespace MyApplication.Resources.MyResource;
 

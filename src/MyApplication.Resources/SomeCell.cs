@@ -1,10 +1,10 @@
-using System;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
 using Moryx.AbstractionLayer;
 using Moryx.AbstractionLayer.Drivers.InOut;
-using Moryx.AbstractionLayer.Drivers.Message;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
@@ -12,7 +12,6 @@ using Moryx.ControlSystem.VisualInstructions;
 using Moryx.Serialization;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
-using Newtonsoft.Json.Linq;
 
 namespace MyApplication.Resources;
 
