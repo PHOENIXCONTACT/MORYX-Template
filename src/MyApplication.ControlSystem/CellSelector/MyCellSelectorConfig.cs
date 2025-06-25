@@ -1,4 +1,6 @@
-﻿using Moryx.ControlSystem.Cells;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using Moryx.ControlSystem.Cells;
 
 namespace MyApplication.ControlSystem.CellSelector;
 

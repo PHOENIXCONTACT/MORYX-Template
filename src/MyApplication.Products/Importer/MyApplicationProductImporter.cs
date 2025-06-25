@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Products;
 using Moryx.Container;
@@ -13,7 +15,7 @@ namespace MyApplication.Products;
 /// </summary>
 [ExpectedConfig(typeof(MyApplicationProductImporterConfig))]
 [Plugin(LifeCycle.Transient, typeof(IProductImporter), Name = nameof(MyApplicationProductImporter))]
-public  class MyApplicationProductImporter :  ProductImporterBase<MyApplicationProductImporterConfig, MyApplicationImportParameters>, ILoggingComponent
+public class MyApplicationProductImporter : ProductImporterBase<MyApplicationProductImporterConfig, MyApplicationImportParameters>, ILoggingComponent
 {
     /// <inheritdoc />
     public IModuleLogger Logger { get; set; }

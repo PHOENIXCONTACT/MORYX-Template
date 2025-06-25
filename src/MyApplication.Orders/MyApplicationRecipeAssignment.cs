@@ -1,4 +1,5 @@
-﻿using System;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Recipes;

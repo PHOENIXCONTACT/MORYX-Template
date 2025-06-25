@@ -1,3 +1,5 @@
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using Moryx.StateMachines;
 
 namespace MyApplication.Resources.SomeCell.States

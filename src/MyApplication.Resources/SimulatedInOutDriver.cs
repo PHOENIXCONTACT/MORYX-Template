@@ -1,3 +1,5 @@
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using Moryx.AbstractionLayer;
 using Moryx.Drivers.Simulation.InOutDriver;
 using Moryx.Simulation;
@@ -25,8 +27,8 @@ public class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
             else
             {
                 SimulatedState = SimulationState.Idle;
+            }
         }
-    }
     }
 
     public override void Result(SimulationResult result)

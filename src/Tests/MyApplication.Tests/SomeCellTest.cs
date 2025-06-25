@@ -1,4 +1,6 @@
-﻿using MyApplication.Resources;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using MyApplication.Resources;
 using NUnit.Framework;
 
 namespace MyApplication.Tests;

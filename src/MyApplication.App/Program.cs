@@ -1,3 +1,5 @@
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,7 +43,6 @@ services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
-
 
 services.AddCors(options =>
 {
