@@ -9,11 +9,15 @@ public class SomeCapabilities : CapabilitiesBase
     protected override bool ProvidedBy(ICapabilities provided)
     {
         var providedSome = provided as SomeCapabilities;
-        if (providedSome== null)
+        if (providedSome == null)
+        {
             return false;
+        }
 
         if (providedSome.Value < Value) // Provided must be greater or equal
+        {
             return false;
+        }
 
         return true;
 

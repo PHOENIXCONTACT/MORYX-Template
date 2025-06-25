@@ -85,7 +85,9 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 if (env.IsDevelopment())
+{
     app.UseCors("CorsPolicy");
+}
 
 app.UseAuthentication();
 app.UseAuthorization();

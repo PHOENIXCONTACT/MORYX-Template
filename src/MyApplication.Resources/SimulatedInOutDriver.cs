@@ -19,10 +19,14 @@ public class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
         if (key == "Start")
         {
             if ((bool)SimulatedOutput.Values["Start"])
+            {
                 SimulatedState = SimulationState.Executing;
+            }
             else
+            {
                 SimulatedState = SimulationState.Idle;
         }
+    }
     }
 
     public override void Result(SimulationResult result)

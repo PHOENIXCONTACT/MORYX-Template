@@ -37,7 +37,9 @@ public class SomeCell : Cell
         Capabilities = new SomeCapabilities { Value = Value };
 
         if (Driver != null)
+        {
             Driver.Input.InputChanged += OnInputChanged;
+        }
     }
 
     protected override void OnStart()
@@ -82,7 +84,9 @@ public class SomeCell : Cell
             // Clear driver and/or instructor
             VisualInstructor?.Clear(_currentInstruction);
             if (Driver != null)
+            {
                 Driver.Output["Start"] = false;
+            }
 
             // Report current activity as failed
             activityStart.CreateResult((int)SomeActivityResults.Failed);
