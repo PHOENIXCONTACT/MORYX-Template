@@ -1,4 +1,6 @@
-﻿using Moryx.AbstractionLayer.Recipes;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using Moryx.AbstractionLayer.Recipes;
 using Moryx.ControlSystem.Recipes;
 
 namespace MyApplication.Recipes;

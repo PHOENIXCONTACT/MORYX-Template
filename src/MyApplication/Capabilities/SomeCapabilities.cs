@@ -1,4 +1,6 @@
-﻿using Moryx.AbstractionLayer.Capabilities;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using Moryx.AbstractionLayer.Capabilities;
 
 namespace MyApplication.Capabilities;
 
@@ -10,11 +12,16 @@ public class SomeCapabilities : CapabilitiesBase
     {
         var providedSome = provided as SomeCapabilities;
         if (providedSome == null)
+        {
             return false;
+        }
 
         if (providedSome.Value < Value) // Provided must be greater or equal
+        {
             return false;
+        }
 
         return true;
+
     }
 }

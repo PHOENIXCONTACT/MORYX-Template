@@ -1,4 +1,4 @@
-﻿using Moryx.StateMachines;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
 
 namespace MyApplication.Resources.SomeCell.States
 {

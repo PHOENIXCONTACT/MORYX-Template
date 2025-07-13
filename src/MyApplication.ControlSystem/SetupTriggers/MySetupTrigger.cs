@@ -1,11 +1,12 @@
-﻿using System;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using System;
 using System.Collections.Generic;
 using Moryx.AbstractionLayer.Recipes;
 using Moryx.Container;
 using Moryx.ControlSystem.Setups;
 using Moryx.Modules;
 using Moryx.Workplans;
-using MyApplication.Capabilities;
 
 namespace MyApplication.ControlSystem.SetupTriggers;
 
@@ -18,8 +19,6 @@ public class MySetupTrigger : SetupTriggerBase<MySetupTriggerConfig>
     public override SetupEvaluation Evaluate(IProductRecipe recipe)
     {
         return true;
-        return SetupClassification.MaterialChange;
-        return SetupEvaluation.Provide(new SomeCapabilities());
     }
 
     public override IReadOnlyList<IWorkplanStep> CreateSteps(IProductRecipe recipe)

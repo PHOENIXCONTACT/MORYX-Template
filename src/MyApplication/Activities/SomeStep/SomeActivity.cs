@@ -1,4 +1,6 @@
-﻿using Moryx.AbstractionLayer;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using Moryx.AbstractionLayer;
 using Moryx.AbstractionLayer.Capabilities;
 using MyApplication.Capabilities;
 

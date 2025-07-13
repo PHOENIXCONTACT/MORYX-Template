@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+
+using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Moryx.AbstractionLayer.Products;
 using Moryx.Container;
-using Moryx.Logging;
 using Moryx.Orders;
 using Moryx.Orders.Assignment;
 
