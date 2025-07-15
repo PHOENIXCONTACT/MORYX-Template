@@ -10,13 +10,14 @@ using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
 using Moryx.ControlSystem.VisualInstructions;
 using Moryx.Serialization;
+using Moryx.StateMachines;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
 
 namespace MyApplication.Resources;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
-public class SomeCell : Cell
+public class SomeCell : Cell, IStateContext
 {
     [DataMember, EntrySerialize]
     [Description("Configured value for the capabilities")]
@@ -30,6 +31,10 @@ public class SomeCell : Cell
 
     private Session _currentSession;
     private long _currentInstruction;
+
+    public void SetState(IState state)
+    {
+    }
 
     protected override void OnInitialize()
     {

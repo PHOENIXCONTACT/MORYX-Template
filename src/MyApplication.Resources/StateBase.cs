@@ -1,6 +1,6 @@
 ﻿using Moryx.StateMachines;
 
-namespace MyApplication.Resources.SomeCell.States
+namespace MyApplication.Resources
 {
     internal abstract class SomeStateBase : StateBase<SomeCell>
     {
