@@ -10,13 +10,14 @@ using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
 using Moryx.ControlSystem.VisualInstructions;
 using Moryx.Serialization;
+using Moryx.StateMachines;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
 
 namespace MyApplication.Resources;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
-public class SomeCell : Cell
+public class SomeCell : Cell, IStateContext
 {
     private Session _currentSession;
     private long _currentInstruction;
@@ -111,5 +112,10 @@ public class SomeCell : Cell
             _currentSession = result;
             PublishActivityCompleted(result);
         }
+    }
+
+    public void SetState(IState state)
+    {
+        /* Use for a resource state machine */
     }
 }
