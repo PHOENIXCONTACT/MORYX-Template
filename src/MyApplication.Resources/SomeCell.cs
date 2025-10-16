@@ -74,10 +74,6 @@ public class SomeCell : Cell, IStateContext
         /* Start execution here */
     }
 
-    private void InstructionCompleted(int result, ActivityStart session)
-    {
-    }
-
     public override void ProcessAborting(IActivity affectedActivity)
     {
         // Default behavior: Clear instruction and abort execution
