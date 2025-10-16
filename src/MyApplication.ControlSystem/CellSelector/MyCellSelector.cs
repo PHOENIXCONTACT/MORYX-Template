@@ -26,6 +26,6 @@ public class MyCellSelector : CellSelectorBase<MyCellSelectorConfig>
         // Random based load balancer
         var random = new Random();
         var cells = availableCells.OrderBy(cell => random.Next());
-        return cells.ToList();
+        return [.. cells];
     }
 }
