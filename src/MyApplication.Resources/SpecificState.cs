@@ -3,9 +3,6 @@
 
 namespace MyApplication.Resources;
 
-internal class SpecificState : SomeStateBase
+internal class SpecificState(SomeCell context, Moryx.StateMachines.StateBase.StateMap stateMap) : SomeStateBase(context, stateMap)
 {
-    public SpecificState(SomeCell context, StateMap stateMap) : base(context, stateMap)
-    {
-    }
 }

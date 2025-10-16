@@ -5,9 +5,6 @@ using Moryx.StateMachines;
 
 namespace MyApplication.Resources;
 
-internal abstract class SomeStateBase : StateBase<SomeCell>
+internal abstract class SomeStateBase(SomeCell context, StateBase.StateMap stateMap) : StateBase<SomeCell>(context, stateMap)
 {
-    public SomeStateBase(SomeCell context, StateMap stateMap) : base(context, stateMap)
-    {
-    }
 }
