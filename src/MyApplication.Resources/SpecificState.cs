@@ -1,12 +1,11 @@
 // Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
-namespace MyApplication.Resources
+namespace MyApplication.Resources;
+
+internal class SpecificState : SomeStateBase
 {
-    internal class SpecificState : SomeStateBase
+    public SpecificState(SomeCell context, StateMap stateMap) : base(context, stateMap)
     {
-        public SpecificState(SomeCell context, StateMap stateMap) : base(context, stateMap)
-        {
-        }
     }
 }

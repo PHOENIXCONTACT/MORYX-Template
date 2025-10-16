@@ -3,12 +3,11 @@
 
 using Moryx.StateMachines;
 
-namespace MyApplication.Resources
+namespace MyApplication.Resources;
+
+internal abstract class SomeStateBase : StateBase<SomeCell>
 {
-    internal abstract class SomeStateBase : StateBase<SomeCell>
+    public SomeStateBase(SomeCell context, StateMap stateMap) : base(context, stateMap)
     {
-        public SomeStateBase(SomeCell context, StateMap stateMap) : base(context, stateMap)
-        {
-        }
     }
 }
