@@ -2,7 +2,7 @@
 
 using Moryx.AbstractionLayer.Products;
 
-namespace MyApplication.Products;
+namespace MyApplication.Products.Importer;
 
 /// <summary>
 /// Config for the <see cref="MyApplicationProductImporter"/>

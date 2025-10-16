@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Moryx.AbstractionLayer.Resources;
 
-namespace MyApplication.App;
+namespace MyApplication.App.Controllers;
 
 [ApiController, Route("test/")]
 public class MyFacadeController(IResourceManagement facade) : ControllerBase

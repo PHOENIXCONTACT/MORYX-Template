@@ -8,7 +8,7 @@ using Moryx.Logging;
 using Moryx.Modules;
 using Moryx.Products.Management;
 
-namespace MyApplication.Products;
+namespace MyApplication.Products.Importer;
 
 /// <summary>
 /// Imports products for MyApplication

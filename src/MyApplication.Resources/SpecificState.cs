@@ -1,6 +1,6 @@
 // Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
 
-namespace MyApplication.Resources.SomeCell.States
+namespace MyApplication.Resources
 {
     internal class SpecificState : SomeStateBase
     {
