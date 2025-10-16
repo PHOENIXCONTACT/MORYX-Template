@@ -1,4 +1,5 @@
 // Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
 
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,6 @@ public class MyCellSelector : CellSelectorBase<MyCellSelectorConfig>
         // Random based load balancer
         var random = new Random();
         var cells = availableCells.OrderBy(cell => random.Next());
-        return cells.ToList();
+        return [.. cells];
     }
 }
