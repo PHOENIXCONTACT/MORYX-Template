@@ -79,9 +79,7 @@
     <PackageReference Include="Moryx.ProcessData.Adapter.ResourceManagement" />
     <PackageReference Include="Moryx.ProcessData.Adapter.NotificationPublisher" />
     <PackageReference Include="Moryx.ProcessData.Endpoints" />    
-    <!--<PackageReference Include="Moryx.Analytics.Web" />-->
-
-    <PackageReference Include="Wibu.CodeMeter" Version="7.21.0" />
+    <PackageReference Include="Moryx.Analytics.Web" />
   </ItemGroup>
 
   <ItemGroup>
@@ -97,25 +95,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
-  <ItemGroup Condition="'$(OS)' == 'Windows_NT'">
-    <Compile Remove="$(UserProfile)\.nuget\packages\**\*.WibuCmRaU" />
-  </ItemGroup>
- 
-	<ItemGroup Condition="'$(OS)' == 'Windows_NT'">
-		<None Include="$(UserProfile)\.nuget\packages\**\*.WibuCmRaU">
-			<Link>%(Filename)%(Extension)</Link>
-		</None>
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(OS)' == 'Unix'">
-		<Compile Remove="/root/.nuget/packages/**/*.WibuCmRaU" />
-	</ItemGroup>
-
-	<ItemGroup Condition="'$(OS)' == 'Unix'">
-		<None Include="/root/.nuget/packages/**/*.WibuCmRaU">
-			<Link>%(Filename)%(Extension)</Link>
-		</None>
-	</ItemGroup>
 
 </Project>

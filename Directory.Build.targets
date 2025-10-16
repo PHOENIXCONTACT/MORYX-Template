@@ -3,7 +3,7 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxVersion>8.*</MoryxVersion>
+    <MoryxVersion>10.*-future.*</MoryxVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->

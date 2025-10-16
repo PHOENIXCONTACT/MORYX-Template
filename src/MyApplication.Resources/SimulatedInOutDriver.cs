@@ -1,8 +1,8 @@
 // Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
 
 using Moryx.AbstractionLayer;
+using Moryx.ControlSystem.Simulation;
 using Moryx.Drivers.Simulation.InOutDriver;
-using Moryx.Simulation;
 
 namespace MyApplication.Resources;
 
