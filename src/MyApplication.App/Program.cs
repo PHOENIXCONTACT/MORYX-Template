@@ -1,11 +1,12 @@
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
+
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Moryx.Asp.Integration;
 using Moryx.Launcher;
 using Moryx.Model;
 using Moryx.Runtime.Kernel;
@@ -43,7 +44,6 @@ services.Configure<RequestLocalizationOptions>(options =>
     options.SupportedCultures = supportedCultures;
     options.SupportedUICultures = supportedCultures;
 });
-
 
 services.AddCors(options =>
 {
@@ -87,7 +87,9 @@ app.UseHttpsRedirection();
 app.UseRouting();
 
 if (env.IsDevelopment())
+{
     app.UseCors("CorsPolicy");
+}
 
 app.UseAuthentication();
 app.UseAuthorization();

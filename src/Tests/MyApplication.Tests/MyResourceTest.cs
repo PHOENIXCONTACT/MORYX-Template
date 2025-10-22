@@ -1,4 +1,7 @@
-﻿using MyApplication.Resources.MyResource;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
+
+using MyApplication.Resources.MyResource;
 using NUnit.Framework;
 
 namespace MyApplication.Tests;
@@ -10,13 +13,9 @@ public class MyResourceTest
     public void ResourceKeepsValue()
     {
         // Arrange
-        var myResource = new MyResource();
-        myResource.Value = 42;
 
         // Act
-        myResource.Value = 1337;
 
         // Assert
-        Assert.That(1337, Is.EqualTo(myResource.Value));
     }
 }

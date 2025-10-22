@@ -1,17 +1,13 @@
-﻿using System.ComponentModel;
-using System.Runtime.Serialization;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
+
 using Moryx.AbstractionLayer.Resources;
-using Moryx.Serialization;
 
 namespace MyApplication.Resources.MyResource;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
 public class MyResource : Resource
 {
-    [DataMember, EntrySerialize]
-    [Description("Configurable value")]
-    public int Value { get; set; }
-
     protected override void OnInitialize()
     {
         base.OnInitialize();
@@ -21,5 +17,4 @@ public class MyResource : Resource
     {
         base.OnDispose();
     }
-
 }

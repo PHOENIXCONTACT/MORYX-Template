@@ -3,7 +3,7 @@
 
   <!-- Central package version management -->
   <PropertyGroup>
-    <MoryxVersion>8.*</MoryxVersion>
+    <MoryxVersion>10.*-future.*</MoryxVersion>
   </PropertyGroup>
 
   <!-- Package versions for package references across all projects -->
@@ -85,9 +85,8 @@
     <PackageReference Update="Moryx.Launcher" Version="$(MoryxVersion)" />
 
     <!-- MORYX Simulation -->
-    <PackageReference Update="Moryx.Simulation" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.Drivers.Simulation" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Simulation.Simulator" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.ControlSystem.Simulator" Version="$(MoryxVersion)" />
 
     <!-- MORYX FactoryMonitor-->
     <PackageReference Update="Moryx.FactoryMonitor.Web" Version="$(MoryxVersion)" />

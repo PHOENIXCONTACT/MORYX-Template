@@ -1,11 +1,9 @@
-﻿using Moryx.AbstractionLayer;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
+
+using Moryx.AbstractionLayer;
+using Moryx.ControlSystem.Simulation;
 using Moryx.Drivers.Simulation.InOutDriver;
-using Moryx.Simulation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyApplication.Resources;
 
@@ -24,9 +22,13 @@ public class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
         if (key == "Start")
         {
             if ((bool)SimulatedOutput.Values["Start"])
+            {
                 SimulatedState = SimulationState.Executing;
+            }
             else
+            {
                 SimulatedState = SimulationState.Idle;
+            }
         }
     }
 

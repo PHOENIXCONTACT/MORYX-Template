@@ -1,11 +1,8 @@
-﻿using Moryx.StateMachines;
+// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Licensed under the Apache License, Version 2.0
 
-namespace MyApplication.Resources.SomeCell.States
+namespace MyApplication.Resources;
+
+internal class SpecificState(SomeCell context, Moryx.StateMachines.StateBase.StateMap stateMap) : SomeStateBase(context, stateMap)
 {
-    internal class SpecificState : SomeStateBase
-    {
-        public SpecificState(SomeCell context, StateMap stateMap) : base(context, stateMap)
-        {
-        }
-    }
 }
