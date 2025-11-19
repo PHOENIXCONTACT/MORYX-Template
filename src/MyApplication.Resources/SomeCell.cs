@@ -4,7 +4,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
-using Moryx.AbstractionLayer;
+using Moryx.AbstractionLayer.Activities;
 using Moryx.AbstractionLayer.Drivers.InOut;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.ControlSystem.Activities;
@@ -24,7 +24,7 @@ public class SomeCell : Cell, IStateContext
     private long _currentInstruction;
 
     [ResourceReference(ResourceRelationType.Driver)]
-    public IInOutDriver<object, object> Driver { get; set; }
+    public IInOutDriver Driver { get; set; }
 
     [ResourceReference(ResourceRelationType.Extension)]
     public IVisualInstructor VisualInstructor { get; set; }
@@ -59,12 +59,12 @@ public class SomeCell : Cell, IStateContext
         base.OnDispose();
     }
 
-    public override IEnumerable<Session> ControlSystemAttached()
+    protected override IEnumerable<Session> ProcessEngineAttached()
     {
         yield break;
     }
 
-    public override IEnumerable<Session> ControlSystemDetached()
+    protected override IEnumerable<Session> ProcessEngineDetached()
     {
         yield break;
     }
