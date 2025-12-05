@@ -9,7 +9,7 @@ using Moryx.AbstractionLayer.Drivers.InOut;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
-using Moryx.ControlSystem.VisualInstructions;
+using Moryx.VisualInstructions;
 using Moryx.Serialization;
 using Moryx.StateMachines;
 using MyApplication.Activities.SomeStep;
