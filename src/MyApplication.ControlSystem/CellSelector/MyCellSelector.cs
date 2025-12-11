@@ -22,7 +22,7 @@ public class MyCellSelector : CellSelectorBase<MyCellSelectorConfig>
     /// </summary>
     public IActivityPool ActivityPool { get; set; }
 
-    public override Task<IReadOnlyList<ICell>> SelectCellsAsync(IActivity activity, IReadOnlyList<ICell> availableCells)
+    public override Task<IReadOnlyList<ICell>> SelectCellsAsync(Activity activity, IReadOnlyList<ICell> availableCells)
     {
         // Random based load balancer
         var random = new Random();

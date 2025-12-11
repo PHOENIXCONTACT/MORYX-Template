@@ -75,7 +75,7 @@ public class SomeCell : Cell, IAsyncStateContext
         /* Start execution here */
     }
 
-    public override void ProcessAborting(IActivity affectedActivity)
+    public override void ProcessAborting(Activity affectedActivity)
     {
         // Default behavior: Clear instruction and abort execution
         if (_currentSession is ActivityStart activityStart)

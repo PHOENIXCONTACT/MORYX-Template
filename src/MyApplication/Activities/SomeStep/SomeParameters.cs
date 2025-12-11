@@ -9,7 +9,7 @@ namespace MyApplication.Activities.SomeStep;
 
 public class SomeParameters : VisualInstructionParameters
 {
-    protected override void Populate(IProcess process, Parameters instance)
+    protected override void Populate(Process process, Parameters instance)
     {
     }
 }

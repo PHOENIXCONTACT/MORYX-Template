@@ -9,7 +9,7 @@ namespace MyApplication.Resources;
 
 public class SomeSimulatedInOutDriver : SimulatedInOutDriver
 {
-    public override void Ready(IActivity activity)
+    public override void Ready(Activity activity)
     {
         SimulatedState = SimulationState.Requested;
 
