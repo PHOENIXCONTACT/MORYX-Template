@@ -4,6 +4,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Activities;
 using Moryx.Container;
 using Moryx.ControlSystem.Cells;
@@ -21,11 +22,11 @@ public class MyCellSelector : CellSelectorBase<MyCellSelectorConfig>
     /// </summary>
     public IActivityPool ActivityPool { get; set; }
 
-    public override IReadOnlyList<ICell> SelectCells(IActivity activity, IReadOnlyList<ICell> availableCells)
+    public override Task<IReadOnlyList<ICell>> SelectCellsAsync(IActivity activity, IReadOnlyList<ICell> availableCells)
     {
         // Random based load balancer
         var random = new Random();
         var cells = availableCells.OrderBy(cell => random.Next());
-        return [.. cells];
+        return Task.FromResult<IReadOnlyList<ICell>>([.. cells]);
     }
 }

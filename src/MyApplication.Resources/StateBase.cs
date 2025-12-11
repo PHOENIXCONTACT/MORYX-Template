@@ -5,6 +5,6 @@ using Moryx.StateMachines;
 
 namespace MyApplication.Resources;
 
-internal abstract class SomeStateBase(SomeCell context, StateBase.StateMap stateMap) : StateBase<SomeCell>(context, stateMap)
+internal abstract class SomeStateBase(SomeCell context, StateBase.StateMap stateMap) : AsyncStateBase<SomeCell>(context, stateMap)
 {
 }

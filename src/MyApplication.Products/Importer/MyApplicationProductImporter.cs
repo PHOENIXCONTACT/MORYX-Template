@@ -23,7 +23,7 @@ public class MyApplicationProductImporter : ProductImporterBase<MyApplicationPro
 
     public IProductStorage Storage { get; set; }
 
-    protected override Task<ProductImporterResult> Import(ProductImportContext context, MyApplicationImportParameters parameters)
+    protected override Task<ProductImporterResult> ImportAsync(ProductImportContext context, MyApplicationImportParameters parameters)
     {
         var products = new List<ProductType>();
 

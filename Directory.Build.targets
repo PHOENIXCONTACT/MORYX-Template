@@ -21,7 +21,7 @@
     <PackageReference Update="Moryx.Model.PostgreSQL" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.Model.Sqlite" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.Runtime.Kernel" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.Asp.Extensions" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.AspNetCore" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.Runtime" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.TestTools.UnitTest" Version="$(MoryxVersion)" />
     <PackageReference Update="Moryx.AbstractionLayer.TestTools" Version="$(MoryxVersion)" />
@@ -76,10 +76,10 @@
     <PackageReference Update="Moryx.Notifications.Web" Version="$(MoryxVersion)" />
 
     <!-- MORYX Worker Support -->
-    <PackageReference Update="Moryx.Resources.AssemblyInstruction" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.ControlSystem.WorkerSupport" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.ControlSystem.VisualInstructions.Endpoints" Version="$(MoryxVersion)" />
-    <PackageReference Update="Moryx.ControlSystem.WorkerSupport.Web" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.Resources.VisualInstructions" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.VisualInstructions.Endpoints" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.VisualInstructions.Controller" Version="$(MoryxVersion)" />
+    <PackageReference Update="Moryx.VisualInstructions.Web" Version="$(MoryxVersion)" />
 
     <!-- MORYX Launcher -->
     <PackageReference Update="Moryx.Launcher" Version="$(MoryxVersion)" />

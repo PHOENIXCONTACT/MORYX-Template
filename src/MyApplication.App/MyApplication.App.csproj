@@ -10,7 +10,7 @@
 
     <!-- MORYX Framework -->
     <PackageReference Include="Moryx.Runtime.Kernel" />
-    <PackageReference Include="Moryx.Asp.Extensions" />
+    <PackageReference Include="Moryx.AspNetCore" />
 
     <!-- MORYX Command Center -->
     <PackageReference Include="Moryx.Runtime.Endpoints" />
@@ -57,10 +57,10 @@
     <PackageReference Include="Moryx.Notifications.Web" />
 
     <!-- MORYX Worker Support -->
-    <PackageReference Include="Moryx.Resources.AssemblyInstruction" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport" />
-    <PackageReference Include="Moryx.ControlSystem.VisualInstructions.Endpoints" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport.Web" />
+    <PackageReference Include="Moryx.Resources.VisualInstructions" />
+    <PackageReference Include="Moryx.VisualInstructions.Controller" />
+    <PackageReference Include="Moryx.VisualInstructions.Endpoints" />
+    <PackageReference Include="Moryx.VisualInstructions.Web" />
 
     <!-- MORYX Launcher -->
     <PackageReference Include="Moryx.Launcher" />

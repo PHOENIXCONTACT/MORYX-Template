@@ -102,8 +102,8 @@ app.MapRazorPages();
 app.Services.UseMoryxConfigurations("Config");
 
 var moduleManager = app.Services.GetRequiredService<IModuleManager>();
-moduleManager.StartModules();
+await moduleManager.StartModulesAsync();
 
 app.Run();
 
-moduleManager.StopModules();
+await moduleManager.StopModulesAsync();

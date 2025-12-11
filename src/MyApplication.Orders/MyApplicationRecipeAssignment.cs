@@ -17,13 +17,13 @@ namespace MyApplication.Orders;
 public class MyApplicationRecipeAssignment : RecipeAssignmentBase<RecipeAssignmentConfig>
 {
     /// <inheritdoc />
-    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipes(Operation operation, IOperationLogger operationLogger)
+    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipesAsync(Operation operation, IOperationLogger operationLogger)
     {
-        return new[] { await LoadDefaultRecipe(operation.Product) };
+        return new[] { await LoadDefaultRecipeAsync(operation.Product) };
     }
 
     /// <inheritdoc />
-    public override Task<bool> ProcessRecipe(IProductRecipe clone, Operation operation, IOperationLogger operationLogger)
+    public override Task<bool> ProcessRecipeAsync(IProductRecipe clone, Operation operation, IOperationLogger operationLogger)
     {
         return Task.FromResult(true);
     }

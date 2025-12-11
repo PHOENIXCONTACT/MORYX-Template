@@ -14,11 +14,12 @@ using Moryx.Serialization;
 using Moryx.StateMachines;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
+using System.Threading.Tasks;
 
 namespace MyApplication.Resources;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
-public class SomeCell : Cell, IStateContext
+public class SomeCell : Cell, IAsyncStateContext
 {
     private Session _currentSession;
     private long _currentInstruction;
@@ -33,9 +34,9 @@ public class SomeCell : Cell, IStateContext
     [Description("Configured value for the capabilities")]
     public int Value { get; set; }
 
-    protected override void OnInitialize()
+    protected override async Task OnInitializeAsync()
     {
-        base.OnInitialize();
+        await base.OnInitializeAsync();
         Capabilities = new SomeCapabilities { Value = Value };
 
         if (Driver != null)
@@ -44,14 +45,14 @@ public class SomeCell : Cell, IStateContext
         }
     }
 
-    protected override void OnStart()
+    protected override async Task OnStartAsync()
     {
-        base.OnStart();
+        await base.OnStartAsync();
     }
 
-    protected override void OnStop()
+    protected override async Task OnStopAsync()
     {
-        base.OnStop();
+        await base.OnStopAsync();
     }
 
     protected override void OnDispose()
@@ -111,8 +112,9 @@ public class SomeCell : Cell, IStateContext
         }
     }
 
-    public void SetState(IState state)
+    public Task SetStateAsync(StateBase state)
     {
         /* Use for a resource state machine */
+        throw new System.NotImplementedException();
     }
 }
