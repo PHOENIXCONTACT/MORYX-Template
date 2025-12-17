@@ -4,17 +4,18 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
+using System.Threading;
+using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Activities;
 using Moryx.AbstractionLayer.Drivers.InOut;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
-using Moryx.VisualInstructions;
 using Moryx.Serialization;
 using Moryx.StateMachines;
+using Moryx.VisualInstructions;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
-using System.Threading.Tasks;
 
 namespace MyApplication.Resources;
 
@@ -34,9 +35,9 @@ public class SomeCell : Cell, IAsyncStateContext
     [Description("Configured value for the capabilities")]
     public int Value { get; set; }
 
-    protected override async Task OnInitializeAsync()
+    protected override async Task OnInitializeAsync(CancellationToken cancellationToken)
     {
-        await base.OnInitializeAsync();
+        await base.OnInitializeAsync(cancellationToken);
         Capabilities = new SomeCapabilities { Value = Value };
 
         if (Driver != null)
@@ -45,14 +46,14 @@ public class SomeCell : Cell, IAsyncStateContext
         }
     }
 
-    protected override async Task OnStartAsync()
+    protected override async Task OnStartAsync(CancellationToken cancellationToken)
     {
-        await base.OnStartAsync();
+        await base.OnStartAsync(cancellationToken);
     }
 
-    protected override async Task OnStopAsync()
+    protected override async Task OnStopAsync(CancellationToken cancellationToken)
     {
-        await base.OnStopAsync();
+        await base.OnStopAsync(cancellationToken);
     }
 
     protected override void OnDispose()
@@ -112,7 +113,7 @@ public class SomeCell : Cell, IAsyncStateContext
         }
     }
 
-    public Task SetStateAsync(StateBase state)
+    public Task SetStateAsync(StateBase state, CancellationToken cancellationToken)
     {
         /* Use for a resource state machine */
         throw new System.NotImplementedException();

@@ -1,6 +1,7 @@
 // Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Moryx.AbstractionLayer.Products;
@@ -18,10 +19,10 @@ public class MyApplicationProductAssignment : ProductAssignmentBase<ProductAssig
 {
     /// <inheritdoc />
     /// <inheritdoc />
-    public override Task<ProductType> SelectProductAsync(Operation operation, IOperationLogger operationLogger)
+    public override async Task<ProductType> SelectProductAsync(Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
         var productIdentity = (ProductIdentity)operation.Product.Identity;
-        var selectedType = ProductManagement.LoadType(productIdentity);
+        var selectedType = await ProductManagement.LoadTypeAsync(productIdentity, cancellationToken);
 
         if (selectedType == null)
         {
@@ -29,6 +30,6 @@ public class MyApplicationProductAssignment : ProductAssignmentBase<ProductAssig
             return null;
         }
 
-        return Task.FromResult(selectedType);
+        return selectedType;
     }
 }

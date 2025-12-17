@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Products;
 using Moryx.Container;
@@ -23,7 +24,7 @@ public class MyApplicationProductImporter : ProductImporterBase<MyApplicationPro
 
     public IProductStorage Storage { get; set; }
 
-    protected override Task<ProductImporterResult> ImportAsync(ProductImportContext context, MyApplicationImportParameters parameters)
+    protected override Task<ProductImporterResult> ImportAsync(ProductImportContext context, MyApplicationImportParameters parameters, CancellationToken cancellationToken)
     {
         var products = new List<ProductType>();
 

@@ -2,6 +2,7 @@
 // Licensed under the Apache License, Version 2.0
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Recipes;
 using Moryx.Container;
@@ -17,13 +18,13 @@ namespace MyApplication.Orders;
 public class MyApplicationRecipeAssignment : RecipeAssignmentBase<RecipeAssignmentConfig>
 {
     /// <inheritdoc />
-    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipesAsync(Operation operation, IOperationLogger operationLogger)
+    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipesAsync(Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
-        return new[] { await LoadDefaultRecipeAsync(operation.Product) };
+        return [await LoadDefaultRecipeAsync(operation.Product, cancellationToken)];
     }
 
     /// <inheritdoc />
-    public override Task<bool> ProcessRecipeAsync(IProductRecipe clone, Operation operation, IOperationLogger operationLogger)
+    public override Task<bool> ProcessRecipeAsync(IProductRecipe clone, Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
         return Task.FromResult(true);
     }
