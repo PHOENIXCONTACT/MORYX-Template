@@ -113,7 +113,7 @@ public class SomeCell : Cell, IAsyncStateContext
         }
     }
 
-    public Task SetStateAsync(StateBase state, CancellationToken cancellationToken)
+    Task IAsyncStateContext.SetStateAsync(StateBase state, CancellationToken cancellationToken)
     {
         /* Use for a resource state machine */
         throw new System.NotImplementedException();
