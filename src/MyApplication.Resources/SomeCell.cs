@@ -56,11 +56,6 @@ public class SomeCell : Cell, IAsyncStateContext
         await base.OnStopAsync(cancellationToken);
     }
 
-    protected override void OnDispose()
-    {
-        base.OnDispose();
-    }
-
     protected override IEnumerable<Session> ProcessEngineAttached()
     {
         yield break;
@@ -113,7 +108,7 @@ public class SomeCell : Cell, IAsyncStateContext
         }
     }
 
-    public Task SetStateAsync(StateBase state, CancellationToken cancellationToken)
+    Task IAsyncStateContext.SetStateAsync(StateBase state, CancellationToken cancellationToken)
     {
         /* Use for a resource state machine */
         throw new System.NotImplementedException();

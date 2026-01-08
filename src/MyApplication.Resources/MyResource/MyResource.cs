@@ -10,13 +10,18 @@ namespace MyApplication.Resources.MyResource;
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
 public class MyResource : Resource
 {
-    protected async override Task OnInitializeAsync(CancellationToken cancellationToken)
+    protected override async Task OnInitializeAsync(CancellationToken cancellationToken)
     {
         await base.OnInitializeAsync(cancellationToken);
     }
 
-    protected override void OnDispose()
+    protected override async Task OnStartAsync(CancellationToken cancellationToken)
     {
-        base.OnDispose();
+        await base.OnStartAsync(cancellationToken);
+    }
+
+    protected override async Task OnStopAsync(CancellationToken cancellationToken)
+    {
+        await base.OnStopAsync(cancellationToken);
     }
 }

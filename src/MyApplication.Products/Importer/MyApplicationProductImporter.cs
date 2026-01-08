@@ -22,8 +22,12 @@ public class MyApplicationProductImporter : ProductImporterBase<MyApplicationPro
     /// <inheritdoc />
     public IModuleLogger Logger { get; set; }
 
+    /// <summary>
+    /// Product storage to persist and load imported products or recipes
+    /// </summary>
     public IProductStorage Storage { get; set; }
 
+    /// <inheritdoc />
     protected override Task<ProductImporterResult> ImportAsync(ProductImportContext context, MyApplicationImportParameters parameters, CancellationToken cancellationToken)
     {
         var products = new List<ProductType>();
