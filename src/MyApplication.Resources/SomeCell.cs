@@ -56,11 +56,6 @@ public class SomeCell : Cell, IAsyncStateContext
         await base.OnStopAsync(cancellationToken);
     }
 
-    protected override void OnDispose()
-    {
-        base.OnDispose();
-    }
-
     protected override IEnumerable<Session> ProcessEngineAttached()
     {
         yield break;

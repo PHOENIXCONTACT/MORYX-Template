@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Shared/">
     <File Path=".editorconfig" />
+    <File Path=".moryxtpl" />
     <File Path="Directory.Build.props" />
     <File Path="Directory.Build.targets" />
     <File Path="NuGet.Config" />

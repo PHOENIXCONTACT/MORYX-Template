@@ -20,7 +20,9 @@ public class MyApplicationRecipeAssignment : RecipeAssignmentBase<RecipeAssignme
     /// <inheritdoc />
     public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipesAsync(Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
-        return [await LoadDefaultRecipeAsync(operation.Product, cancellationToken)];
+        var defaultRecipe = await LoadDefaultRecipeAsync(operation.Product, cancellationToken);
+
+        return [defaultRecipe];
     }
 
     /// <inheritdoc />
