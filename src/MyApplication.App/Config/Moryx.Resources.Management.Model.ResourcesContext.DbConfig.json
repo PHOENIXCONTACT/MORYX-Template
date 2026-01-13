@@ -1,5 +1,5 @@
 {
   "ConfiguratorType": "Moryx.Model.Sqlite.SqliteModelConfigurator, Moryx.Model.Sqlite, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null",
-  "ConnectionString": "Data Source=./db/ProcessContext.db;Mode=ReadWrite;Cache=Default;",
+  "ConnectionString": "Data Source=./db/ResourcesContext.db;Mode=ReadWrite;Cache=Default;",
   "ConfigState": "Valid"
 }

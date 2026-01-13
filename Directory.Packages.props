@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+
+  <!-- Enable central package version management -->
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <MoryxVersion>10.*</MoryxVersion>
+    <CentralPackageFloatingVersionsEnabled>true</CentralPackageFloatingVersionsEnabled>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+
+  <!-- Central package versions for all projects under this directory -->
+  <ItemGroup>
+    <!-- 3rd party dependencies -->
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.*" />
+    <PackageVersion Include="Moq" Version="4.*" />
+    <PackageVersion Include="NUnit" Version="4.*" />
+    <PackageVersion Include="NUnit3TestAdapter" Version="4.*" />
+    <PackageVersion Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+
+    <!-- Pin transitive dependency to prevent vulnerability warnings -->
+    <PackageVersion Include="System.Net.Http" Version="4.3.4" />
+
+    <!-- MORYX Framework -->
+    <PackageVersion Include="Moryx" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.AbstractionLayer" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Notifications" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Model.PostgreSQL" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Model.Sqlite" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Runtime.Kernel" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.AspNetCore" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Runtime" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.TestTools.UnitTest" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.AbstractionLayer.TestTools" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Factory -->
+    <PackageVersion Include="Moryx.ControlSystem" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Orders" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Command Center -->
+    <PackageVersion Include="Moryx.Runtime.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.CommandCenter.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Resources -->
+    <PackageVersion Include="Moryx.Resources.Management" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.AbstractionLayer.Resources.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Resources.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Products -->
+    <PackageVersion Include="Moryx.Products.Management" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.AbstractionLayer.Products.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Products.Web" Version="$(MoryxVersion)" />
+
+    <!-- Workplans dependencies -->
+    <PackageVersion Include="Moryx.Workplans.Editing" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Workplans" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Workplans.Web" Version="$(MoryxVersion)" />
+
+    <!-- Media -->
+    <PackageVersion Include="Moryx.Media" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Media.Server" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Media.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Media.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Orders -->
+    <PackageVersion Include="Moryx.Orders.Management" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Orders.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Orders.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Process Engine -->
+    <PackageVersion Include="Moryx.ControlSystem.ProcessEngine" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ControlSystem.Jobs.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ControlSystem.Processes.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ControlSystem.ProcessEngine.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Setups -->
+    <PackageVersion Include="Moryx.ControlSystem.SetupProvider" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Notifications -->
+    <PackageVersion Include="Moryx.Notifications.Publisher" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Notifications.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.Notifications.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX VisualInstructions -->
+    <PackageVersion Include="Moryx.Resources.VisualInstructions" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.VisualInstructions.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.VisualInstructions.Controller" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.VisualInstructions.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Launcher -->
+    <PackageVersion Include="Moryx.Launcher" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Simulation -->
+    <PackageVersion Include="Moryx.Drivers.Simulation" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ControlSystem.Simulator" Version="$(MoryxVersion)" />
+
+    <!-- MORYX FactoryMonitor -->
+    <PackageVersion Include="Moryx.FactoryMonitor.Web" Version="$(MoryxVersion)" />
+
+    <!-- MORYX Process Data -->
+    <PackageVersion Include="Moryx.ProcessData.Monitor" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.InfluxDbListener" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.SpreadsheetsListener" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.Adapter.ProcessEngine" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.Adapter.ResourceManagement" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.Adapter.NotificationPublisher" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.Endpoints" Version="$(MoryxVersion)" />
+    <PackageVersion Include="Moryx.ProcessData.Web" Version="$(MoryxVersion)" />
+  </ItemGroup>
+
+</Project>

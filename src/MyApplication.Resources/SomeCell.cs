@@ -1,30 +1,32 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.Serialization;
-using Moryx.AbstractionLayer;
+using System.Threading;
+using System.Threading.Tasks;
+using Moryx.AbstractionLayer.Activities;
 using Moryx.AbstractionLayer.Drivers.InOut;
 using Moryx.AbstractionLayer.Resources;
 using Moryx.ControlSystem.Activities;
 using Moryx.ControlSystem.Cells;
-using Moryx.ControlSystem.VisualInstructions;
 using Moryx.Serialization;
 using Moryx.StateMachines;
+using Moryx.VisualInstructions;
 using MyApplication.Activities.SomeStep;
 using MyApplication.Capabilities;
 
 namespace MyApplication.Resources;
 
 [ResourceRegistration] // Only necessary for dependency injection like logging or parallel operations
-public class SomeCell : Cell, IStateContext
+public class SomeCell : Cell, IAsyncStateContext
 {
     private Session _currentSession;
     private long _currentInstruction;
 
     [ResourceReference(ResourceRelationType.Driver)]
-    public IInOutDriver<object, object> Driver { get; set; }
+    public IInOutDriver Driver { get; set; }
 
     [ResourceReference(ResourceRelationType.Extension)]
     public IVisualInstructor VisualInstructor { get; set; }
@@ -33,9 +35,9 @@ public class SomeCell : Cell, IStateContext
     [Description("Configured value for the capabilities")]
     public int Value { get; set; }
 
-    protected override void OnInitialize()
+    protected override async Task OnInitializeAsync(CancellationToken cancellationToken)
     {
-        base.OnInitialize();
+        await base.OnInitializeAsync(cancellationToken);
         Capabilities = new SomeCapabilities { Value = Value };
 
         if (Driver != null)
@@ -44,27 +46,22 @@ public class SomeCell : Cell, IStateContext
         }
     }
 
-    protected override void OnStart()
+    protected override async Task OnStartAsync(CancellationToken cancellationToken)
     {
-        base.OnStart();
+        await base.OnStartAsync(cancellationToken);
     }
 
-    protected override void OnStop()
+    protected override async Task OnStopAsync(CancellationToken cancellationToken)
     {
-        base.OnStop();
+        await base.OnStopAsync(cancellationToken);
     }
 
-    protected override void OnDispose()
-    {
-        base.OnDispose();
-    }
-
-    public override IEnumerable<Session> ControlSystemAttached()
+    protected override IEnumerable<Session> ProcessEngineAttached()
     {
         yield break;
     }
 
-    public override IEnumerable<Session> ControlSystemDetached()
+    protected override IEnumerable<Session> ProcessEngineDetached()
     {
         yield break;
     }
@@ -74,7 +71,7 @@ public class SomeCell : Cell, IStateContext
         /* Start execution here */
     }
 
-    public override void ProcessAborting(IActivity affectedActivity)
+    public override void ProcessAborting(Activity affectedActivity)
     {
         // Default behavior: Clear instruction and abort execution
         if (_currentSession is ActivityStart activityStart)
@@ -111,8 +108,9 @@ public class SomeCell : Cell, IStateContext
         }
     }
 
-    public void SetState(IState state)
+    Task IAsyncStateContext.SetStateAsync(StateBase state, CancellationToken cancellationToken)
     {
         /* Use for a resource state machine */
+        throw new System.NotImplementedException();
     }
 }

@@ -78,10 +78,10 @@
         "SomeResource": "{resource}",
         "SomeCell": "{resource}",
         "SomeStateBase": "{resource}StateBase",
-        "StateBase.cs": "{resource}StateBase.cs"
+        "SomeStateBase.cs": "{resource}StateBase.cs"
       },
       "Files": [
-        "**\\StateBase.cs"
+        "**\\SomeStateBase.cs"
       ]
     }
   }

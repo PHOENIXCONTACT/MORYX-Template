@@ -1,4 +1,4 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
 using Microsoft.AspNetCore.Authorization;
@@ -9,16 +9,6 @@ namespace MyApplication.App;
 
 public class ExamplePolicyProvider(IOptions<AuthorizationOptions> options) : DefaultAuthorizationPolicyProvider(options)
 {
-    public override async Task<AuthorizationPolicy> GetPolicyAsync(string policyName)
-    {
-        var policy = await base.GetPolicyAsync(policyName);
-
-        if (policy == null)
-        {
-            policy = new AuthorizationPolicyBuilder()
-                .RequireClaim("Permission", policyName)
-                .Build();
-        }
-        return policy;
-    }
+    public override async Task<AuthorizationPolicy> GetPolicyAsync(string policyName) =>
+        await base.GetPolicyAsync(policyName) ?? new AuthorizationPolicyBuilder().RequireClaim("Permission", policyName).Build();
 }

@@ -29,27 +29,25 @@ In any case you should install the PHOENIX CONTACT Activation Wizard available o
 
 ## Getting Started
 
-You can either use this repository as a template directly on GitLab or clone it like any other GIT repository. 
+You can either use this repository as a template directly on GitLab or clone it like any other GIT repository.
 
 ### Requirements
-- Visual Studio 2022
-- PHOENIX CONTACT Activation Wizard
+- Visual Studio >=2026 or Rider >=2025.3.0
 - Influx 1.x (optional)
 - Grafana (for dashboards)
 
 ### Run the application
-Open the solutions and run the application. Per default this will require access to port 5000, alternative you can configure a different port in the *launchSettings.json* within the *Properties* of the *StartProject*. While the server is running you can open the *CommandCenter* at https://localhost:5000/CommandCenter#/. [Modules](https://localhost:5000/CommandCenter#/modules) is used to interact and configure modules, while [Databases](https://localhost:5000/CommandCenter#/databases) lets you configure, create and delete databases for installed data models. Some modules like the *ResourceManager* require a database in order to start. You can choose between *PostgreSQL* und *SQlite*. 
+Open the solutions and run the application. Per default this will require access to port 5000, alternative you can configure a different port in the *launchSettings.json* within the *Properties* of the *StartProject*. While the server is running you can open the *CommandCenter* at https://localhost:5000/CommandCenter#/. [Modules](https://localhost:5000/CommandCenter#/modules) is used to interact and configure modules, while [Databases](https://localhost:5000/CommandCenter#/databases) lets you configure, create and delete databases for installed data models. Some modules like the *ResourceManager* require a database in order to start. You can choose between *PostgreSQL* und *SQlite*.
 
 ### Module Quick Start
 
-The modules entry class *ModuleController* is prepared for usage with or without a facade. Just (un)comment the necessary code blocks. 
-
-You can interact with the module through console or *MaintenanceWeb*. To invoke the `SayHello`-method you can type "exec MyModule hello Name" or "enter MyModule" followed by "hello Name". To remove the scoped mode type "bye".
+The modules entry class *ModuleController* is prepared for usage with or without a facade. Just (un)comment the necessary code blocks.
+You can interact with the module through the *CommandCenter*.
 
 ## Trouble Shooting
 
-If you run into problems with the template or MORYX development in general, feel free to join our Gitter channel, ask on StackOverflow using the [`moryx`](https://stackoverflow.com/questions/tagged/moryx) tag or open an issue. In case your back-end application closes directly after start, this is mostly caused by lack of rights, reserved ports or missing libraries. In general *MORYX* creates Logs, which can be accesses *StartProjects* execution directory in the folder *Log*.
+If you run into problems with the template or MORYX development in general, feel free to ask on StackOverflow using the [`moryx`](https://stackoverflow.com/questions/tagged/moryx) tag or open an issue. In general *MORYX* creates Logs, which can be accesses *StartProjects* execution directory in the folder *Log*.
 
 ## Contribute
 
-If you have an idea to improve a template or can think of a new useful template, please make your changes based on one of the template branches and open a pull request. If you want to add a template, extend the branch list in one commit and the template definition in another. This way we can easily put your template into a separate branch. 
+If you have an idea to improve a template or can think of a new useful template, please make your changes based on one of the template branches and open a pull request. If you want to add a template, extend the branch list in one commit and the template definition in another. This way we can easily put your template into a separate branch.

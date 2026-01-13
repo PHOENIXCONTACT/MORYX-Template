@@ -1,7 +1,8 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Products;
 using Moryx.Container;
@@ -21,9 +22,13 @@ public class MyApplicationProductImporter : ProductImporterBase<MyApplicationPro
     /// <inheritdoc />
     public IModuleLogger Logger { get; set; }
 
+    /// <summary>
+    /// Product storage to persist and load imported products or recipes
+    /// </summary>
     public IProductStorage Storage { get; set; }
 
-    protected override Task<ProductImporterResult> Import(ProductImportContext context, MyApplicationImportParameters parameters)
+    /// <inheritdoc />
+    protected override Task<ProductImporterResult> ImportAsync(ProductImportContext context, MyApplicationImportParameters parameters, CancellationToken cancellationToken)
     {
         var products = new List<ProductType>();
 

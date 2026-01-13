@@ -1,9 +1,5 @@
 {
-  "ConfigState": "Generated",
-  "ConnectionSettings": {
-    "$type": "Moryx.Model.Sqlite.SqliteDatabaseConnectionSettings, Moryx.Model.Sqlite",
-    "Database": null,
-    "ConnectionString": "Data Source=.\\db\\<DatabaseName>.db;Mode=ReadWrite;"
-  },
-  "ConfiguratorTypename": "Moryx.Model.Sqlite.SqliteModelConfigurator, Moryx.Model.Sqlite, Version=6.0.0.0, Culture=neutral, PublicKeyToken=null"
+  "ConfiguratorType": "Moryx.Model.Sqlite.SqliteModelConfigurator, Moryx.Model.Sqlite, Version=10.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "ConnectionString": "Data Source=./db/OrdersContext.db;Mode=ReadWrite;Cache=Default;",
+  "ConfigState": "Valid"
 }

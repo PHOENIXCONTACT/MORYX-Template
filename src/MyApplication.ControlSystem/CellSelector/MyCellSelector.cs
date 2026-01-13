@@ -1,10 +1,12 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Moryx.AbstractionLayer;
+using System.Threading;
+using System.Threading.Tasks;
+using Moryx.AbstractionLayer.Activities;
 using Moryx.Container;
 using Moryx.ControlSystem.Cells;
 using Moryx.ControlSystem.Processes;
@@ -21,11 +23,11 @@ public class MyCellSelector : CellSelectorBase<MyCellSelectorConfig>
     /// </summary>
     public IActivityPool ActivityPool { get; set; }
 
-    public override IReadOnlyList<ICell> SelectCells(IActivity activity, IReadOnlyList<ICell> availableCells)
+    public override Task<IReadOnlyList<ICell>> SelectCellsAsync(Activity activity, IReadOnlyList<ICell> availableCells, CancellationToken cancellationToken)
     {
         // Random based load balancer
         var random = new Random();
         var cells = availableCells.OrderBy(cell => random.Next());
-        return [.. cells];
+        return Task.FromResult<IReadOnlyList<ICell>>([.. cells]);
     }
 }

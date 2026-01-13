@@ -1,15 +1,15 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
-using Moryx.AbstractionLayer;
+using Moryx.AbstractionLayer.Activities;
 using Moryx.ControlSystem.Simulation;
 using Moryx.Drivers.Simulation.InOutDriver;
 
 namespace MyApplication.Resources;
 
-public class SimulatedInOutDriver : SimulatedInOutDriver<object, object>
+public class SomeSimulatedInOutDriver : SimulatedInOutDriver
 {
-    public override void Ready(IActivity activity)
+    public override void Ready(Activity activity)
     {
         SimulatedState = SimulationState.Requested;
 

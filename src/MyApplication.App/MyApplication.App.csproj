@@ -1,16 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Swagger -->
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
 
     <!-- MORYX Framework -->
     <PackageReference Include="Moryx.Runtime.Kernel" />
-    <PackageReference Include="Moryx.Asp.Extensions" />
+    <PackageReference Include="Moryx.AspNetCore" />
 
     <!-- MORYX Command Center -->
     <PackageReference Include="Moryx.Runtime.Endpoints" />
@@ -57,10 +57,10 @@
     <PackageReference Include="Moryx.Notifications.Web" />
 
     <!-- MORYX Worker Support -->
-    <PackageReference Include="Moryx.Resources.AssemblyInstruction" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport" />
-    <PackageReference Include="Moryx.ControlSystem.VisualInstructions.Endpoints" />
-    <PackageReference Include="Moryx.ControlSystem.WorkerSupport.Web" />
+    <PackageReference Include="Moryx.Resources.VisualInstructions" />
+    <PackageReference Include="Moryx.VisualInstructions.Controller" />
+    <PackageReference Include="Moryx.VisualInstructions.Endpoints" />
+    <PackageReference Include="Moryx.VisualInstructions.Web" />
 
     <!-- MORYX Launcher -->
     <PackageReference Include="Moryx.Launcher" />
@@ -78,8 +78,7 @@
     <PackageReference Include="Moryx.ProcessData.Adapter.ProcessEngine" />
     <PackageReference Include="Moryx.ProcessData.Adapter.ResourceManagement" />
     <PackageReference Include="Moryx.ProcessData.Adapter.NotificationPublisher" />
-    <PackageReference Include="Moryx.ProcessData.Endpoints" />    
-    <PackageReference Include="Moryx.Analytics.Web" />
+    <PackageReference Include="Moryx.ProcessData.Endpoints" />
   </ItemGroup>
 
   <ItemGroup>

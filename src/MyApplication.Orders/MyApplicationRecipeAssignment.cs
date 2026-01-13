@@ -1,7 +1,8 @@
-// Copyright (c) 2025, Phoenix Contact GmbH & Co. KG
+// Copyright (c) 2026, Phoenix Contact GmbH & Co. KG
 // Licensed under the Apache License, Version 2.0
 
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 using Moryx.AbstractionLayer.Recipes;
 using Moryx.Container;
@@ -17,13 +18,15 @@ namespace MyApplication.Orders;
 public class MyApplicationRecipeAssignment : RecipeAssignmentBase<RecipeAssignmentConfig>
 {
     /// <inheritdoc />
-    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipes(Operation operation, IOperationLogger operationLogger)
+    public override async Task<IReadOnlyList<IProductRecipe>> SelectRecipesAsync(Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
-        return new[] { await LoadDefaultRecipe(operation.Product) };
+        var defaultRecipe = await LoadDefaultRecipeAsync(operation.Product, cancellationToken);
+
+        return [defaultRecipe];
     }
 
     /// <inheritdoc />
-    public override Task<bool> ProcessRecipe(IProductRecipe clone, Operation operation, IOperationLogger operationLogger)
+    public override Task<bool> ProcessRecipeAsync(IProductRecipe clone, Operation operation, IOperationLogger operationLogger, CancellationToken cancellationToken)
     {
         return Task.FromResult(true);
     }
