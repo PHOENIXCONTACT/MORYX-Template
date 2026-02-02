@@ -16,7 +16,7 @@ namespace MyApplication.Products.Importer;
 /// Imports products for MyApplication
 /// </summary>
 [ExpectedConfig(typeof(MyApplicationProductImporterConfig))]
-[Plugin(LifeCycle.Transient, typeof(IProductImporter), Name = nameof(MyApplicationProductImporter))]
+[ProductImporter(nameof(MyApplicationProductImporter))]
 public class MyApplicationProductImporter : ProductImporterBase<MyApplicationProductImporterConfig, MyApplicationImportParameters>, ILoggingComponent
 {
     /// <inheritdoc />
