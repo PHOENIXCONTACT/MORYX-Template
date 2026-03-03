@@ -69,6 +69,8 @@ services.AddSwaggerGen(c =>
 var app = builder.Build();
 var env = app.Environment;
 
+app.Services.UseMoryxConfigurations("Config");
+
 #region Startup Configure App
 if (env.IsDevelopment())
 {
@@ -98,8 +100,6 @@ app.MapControllers().WithMetadata(new AllowAnonymousAttribute());
 app.MapRazorPages();
 
 #endregion
-
-app.Services.UseMoryxConfigurations("Config");
 
 var moduleManager = app.Services.GetRequiredService<IModuleManager>();
 await moduleManager.StartModulesAsync();
